@@ -1,0 +1,71 @@
+*
+	box-sizing: border-box
+
+*:before,
+*:after 
+	box-sizing: border-box
+
+.clearfix:after 
+	content: ""
+	display: block
+	clear: both
+
+h1
+	font-weight: 400
+	font-size: 50px
+	margin: 0 0 45px
+	color: $hd
+
+h2
+	font-weight: 400
+	font-size: 42px
+	margin: 0 0 20px
+	color: $hd
+
+a 
+	transition: all 0.2s ease
+	color: $green
+	&:hover
+		text-decoration: none
+
+a[href^="tel:"] 
+	text-decoration: none
+	color: $text
+	cursor: default
+
+p
+	margin: 0 0 20px
+	line-height: 1.4
+
+html
+	font-size: 100%
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+body
+	font-family: $ff
+	font-weight: $fw
+	font-size: $fsize
+	color: $text
+
+.wrap
+	width: 1200px
+	margin: 0 auto
+	padding: 0 20px
+
+.page-section
+	padding: 60px 0
+	h1,
+	h2
+		text-align: center
+
+.page-section--grey
+	background-color: #f8f8f8
+
+.page-section__subtitle
+	text-align: center
+	margin-bottom: 40px
+
+.page-section__text
+	text-align: center
+	max-width: 80%
+	margin: 0 auto
