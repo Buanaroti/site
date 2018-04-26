@@ -1,29 +1,44 @@
 .header
-	padding: 10px 0
+	
 .header__top
 	background-color: #454445
-.header__wrap
+	
+.header__top-list
 	display: flex
-	justify-content: space-between
-	align-items: center
+	justify-content: flex-end
+	li
+		display: inline-block
+		margin-left: 16px
+	ul :nth-child(4)
+		background-color: $orange
+		padding: 1px 11px
+		border-radius: 5px
 
-.header__logo
-	color: $hd
-	font-size: 42px
-	text-decoration: none
-	font-weight: 700
+.header__middle
 
-.header__menu
-	margin: 0
-	padding: 0
-	list-style: none
 
-.header__menu-i
-	display: inline-block
-	margin-left: 35px
-	a
-		font-style: $fsize
-		color: $hd
-		text-decoration: none
-		&:hover
-			text-decoration: underline
+// .header__wrap
+// 	display: flex
+// 	justify-content: space-between
+// 	align-items: center
+
+// .header__logo
+// 	color: $hd
+// 	font-size: 42px
+// 	text-decoration: none
+// 	font-weight: 700
+
+// .header__menu
+// 	margin: 0
+// 	padding: 0
+// 	list-style: none
+
+// .header__menu-i
+// 	display: inline-block
+// 	margin-left: 35px
+// 	a
+// 		font-style: $fsize
+// 		color: $hd
+// 		text-decoration: none
+// 		&:hover
+// 			text-decoration: underline
