@@ -7,7 +7,7 @@ doctype html
 html(lang="ru")
 	head
 		meta(charset="utf-8")
-		meta(name="viewport" content="width=1200")
+		meta(name="viewport" content="width=1140")
 		title Kawaii tours
 		//css
 		link(rel="stylesheet" href="css/style.min.css")
@@ -18,97 +18,113 @@ html(lang="ru")
 		.page
 			//header
 			include blocks/header
-			
-			//main-slider
-			.main-slider.js-main-slider
-				.main-slider__i(style="background-image: url(/images/slider/slide1.jpg);")
-					.wrap.main-slider__i-wrap
-						.main-slider__i-text
-							h3 Осень в Японии
-							p Для ценителей яркой красоты
-				.main-slider__i(style="background-image: url(/images/slider/slide2.jpg);")
-					.wrap.main-slider__i-wrap
-						.main-slider__i-text
-							h3 Храмы и пагоды
-							p Путешествие к истокам
-				.main-slider__i(style="background-image: url(/images/slider/slide3.jpg);")
-					.wrap.main-slider__i-wrap
-						.main-slider__i-text
-							h3 Фудзи-сан
-							p Лучшие точки для съёмок
-			
-			//about
-			section.page-section#about
-				.wrap
-					h1 Индивидуальные журы в Японию
-					.page-section__text
-						p Kawaii Tour специализируется на путешествиях по Японии, куда редко отправляются российские туристы. Мы изучаем все возможные маршруты, исключая «туристические ловушки», и создаем яркие путешествия, которые не оставят равнодушными даже самых искушенных. Мы не сторонники классических туристических программ, основным пунктом которых является утомительное скитание по музеям – ведь ни история страны, ни культура нации не могут уместиться в рамки одного или нескольких зданий. Мы отдаем предпочтение скрытым от глаз обычного туриста достопримечательностям, о существовании которых можно узнать исключительно из уст местных жителей.
-						p Участники наших путешествий – это те, кого не заманишь горящими турами и all-inclusive. Это любознательные, активные люди, которые знают, что настоящие путешествия – это знакомство с культурой страны и бытом местных жителей, а не томительное ожидание ужина на пляже. Для них главное – понять страну. Именно этих людей мы называем путешественниками, и именно для них мы придумали Kawaii Tour.
 
-			//tours
-			section.page-section.page-section--grey#tour
-				.wrap
-					h2 Туры
-					p.page-section__subtitle Вы можете выбрать одну из стандартных программ или мы вместе придумаем совершенно новое приключение.
-					.tours.clearfix
-						.tours__i
-							.tours__i-card
-								.tours__i-img
-									a(href="#")
-										img(src="images/tour1.jpg", alt="")
-								.tours__i-text
-									.tours__i-name По следам самураев
-									.tours__i-more
-										a(href="#") Подробнее
-						.tours__i
-							.tours__i-card
-								.tours__i-img
-									a(href="#")
-										img(src="images/tour2.jpg", alt="")
-								.tours__i-text
-									.tours__i-name Что скрывают японские храмы
-									.tours__i-more
-										a(href="#") Подробнее
-						.tours__i
-							.tours__i-card
-								.tours__i-img
-									a(href="#")
-										img(src="images/tour3.jpg", alt="")
-								.tours__i-text
-									.tours__i-name Искусство японских садов
-									.tours__i-more
-										a(href="#") Подробнее
-						.tours__i
-							.tours__i-card
-								.tours__i-img
-									a(href="#")
-										img(src="images/tour4.jpg", alt="")
-								.tours__i-text
-									.tours__i-name По следам самураев
-									.tours__i-more
-										a(href="#") Подробнее
+			//content
+			.wrap.content
+				aside.sidebar
+					.sidebar-state
+						p Узнать состояние заказа
+						input(type="text")
+					.sidebar-fastorder
+						a(href="#")
+							img(src="images/download.png", alt="download")
+						p Загрузить файлы<br> для срочного заказа
+					.sidebar-news
+						p Новости компании
+				section.section
+					.section-banner
+						img(src="images/banner.png", alt="banner")
 			
-			//team
-			section.page-section#team
-				.wrap
-					h2 Наша команда
-					p.page-section__subtitle Открываем Японию для вас!
-					.team
-						.team__i
-							.team__i-img
-								img(src="images/p1.jpg", alt="")
-							.team__i-name Екатерина Славина
-							.team__i-pos Менеджер
-						.team__i
-							.team__i-img
-								img(src="images/p2.jpg", alt="")
-							.team__i-name Егор Мальцов
-							.team__i-pos Путешественник и создатель
-						.team__i
-							.team__i-img
-								img(src="images/p3.jpg", alt="")
-							.team__i-name Юки Киото
-							.team__i-pos Консультант
+			//- //main-slider
+			//- .main-slider.js-main-slider
+			//- 	.main-slider__i(style="background-image: url(/images/slider/slide1.jpg);")
+			//- 		.wrap.main-slider__i-wrap
+			//- 			.main-slider__i-text
+			//- 				h3 Осень в Японии
+			//- 				p Для ценителей яркой красоты
+			//- 	.main-slider__i(style="background-image: url(/images/slider/slide2.jpg);")
+			//- 		.wrap.main-slider__i-wrap
+			//- 			.main-slider__i-text
+			//- 				h3 Храмы и пагоды
+			//- 				p Путешествие к истокам
+			//- 	.main-slider__i(style="background-image: url(/images/slider/slide3.jpg);")
+			//- 		.wrap.main-slider__i-wrap
+			//- 			.main-slider__i-text
+			//- 				h3 Фудзи-сан
+			//- 				p Лучшие точки для съёмок
+			
+			//- //about
+			//- section.page-section#about
+			//- 	.wrap
+			//- 		h1 Индивидуальные журы в Японию
+			//- 		.page-section__text
+			//- 			p Kawaii Tour специализируется на путешествиях по Японии, куда редко отправляются российские туристы. Мы изучаем все возможные маршруты, исключая «туристические ловушки», и создаем яркие путешествия, которые не оставят равнодушными даже самых искушенных. Мы не сторонники классических туристических программ, основным пунктом которых является утомительное скитание по музеям – ведь ни история страны, ни культура нации не могут уместиться в рамки одного или нескольких зданий. Мы отдаем предпочтение скрытым от глаз обычного туриста достопримечательностям, о существовании которых можно узнать исключительно из уст местных жителей.
+			//- 			p Участники наших путешествий – это те, кого не заманишь горящими турами и all-inclusive. Это любознательные, активные люди, которые знают, что настоящие путешествия – это знакомство с культурой страны и бытом местных жителей, а не томительное ожидание ужина на пляже. Для них главное – понять страну. Именно этих людей мы называем путешественниками, и именно для них мы придумали Kawaii Tour.
+
+			//- //tours
+			//- section.page-section.page-section--grey#tour
+			//- 	.wrap
+			//- 		h2 Туры
+			//- 		p.page-section__subtitle Вы можете выбрать одну из стандартных программ или мы вместе придумаем совершенно новое приключение.
+			//- 		.tours.clearfix
+			//- 			.tours__i
+			//- 				.tours__i-card
+			//- 					.tours__i-img
+			//- 						a(href="#")
+			//- 							img(src="images/tour1.jpg", alt="")
+			//- 					.tours__i-text
+			//- 						.tours__i-name По следам самураев
+			//- 						.tours__i-more
+			//- 							a(href="#") Подробнее
+			//- 			.tours__i
+			//- 				.tours__i-card
+			//- 					.tours__i-img
+			//- 						a(href="#")
+			//- 							img(src="images/tour2.jpg", alt="")
+			//- 					.tours__i-text
+			//- 						.tours__i-name Что скрывают японские храмы
+			//- 						.tours__i-more
+			//- 							a(href="#") Подробнее
+			//- 			.tours__i
+			//- 				.tours__i-card
+			//- 					.tours__i-img
+			//- 						a(href="#")
+			//- 							img(src="images/tour3.jpg", alt="")
+			//- 					.tours__i-text
+			//- 						.tours__i-name Искусство японских садов
+			//- 						.tours__i-more
+			//- 							a(href="#") Подробнее
+			//- 			.tours__i
+			//- 				.tours__i-card
+			//- 					.tours__i-img
+			//- 						a(href="#")
+			//- 							img(src="images/tour4.jpg", alt="")
+			//- 					.tours__i-text
+			//- 						.tours__i-name По следам самураев
+			//- 						.tours__i-more
+			//- 							a(href="#") Подробнее
+			
+			//- //team
+			//- section.page-section#team
+			//- 	.wrap
+			//- 		h2 Наша команда
+			//- 		p.page-section__subtitle Открываем Японию для вас!
+			//- 		.team
+			//- 			.team__i
+			//- 				.team__i-img
+			//- 					img(src="images/p1.jpg", alt="")
+			//- 				.team__i-name Екатерина Славина
+			//- 				.team__i-pos Менеджер
+			//- 			.team__i
+			//- 				.team__i-img
+			//- 					img(src="images/p2.jpg", alt="")
+			//- 				.team__i-name Егор Мальцов
+			//- 				.team__i-pos Путешественник и создатель
+			//- 			.team__i
+			//- 				.team__i-img
+			//- 					img(src="images/p3.jpg", alt="")
+			//- 				.team__i-name Юки Киото
+			//- 				.team__i-pos Консультант
 
 
 
