@@ -6,7 +6,7 @@
 .sidebar
 	width: 275px
 
-.sidebar-state
+.sidebar__state
 	border: 1px solid $border_color
 	border-radius: 10px
 	box-shadow: 0px 4px 9px 0px rgba(45, 44, 45, 0.20)
@@ -15,21 +15,54 @@
 		margin: 30px 0 20px
 		text-align: center
 
-.sidebar-fastorder
+.sidebar__fastorder
+	display: flex
+	justify-content: center
 	border: 1px solid $border_color
 	border-radius: 10px
 	box-shadow: 0px 4px 9px 0px rgba(45, 44, 45, 0.20)
 	margin-bottom: 20px
+	a
+		margin-right: 20px
 
-.sidebar-news
+.sidebar__news
 	border: 1px solid $border_color
 	border-radius: 10px
 	box-shadow: 0px 4px 9px 0px rgba(45, 44, 45, 0.20)
 	margin-bottom: 20px
+	padding: 20px
+	p
+		margin: 20px 0 20px
+		text-align: center
 
 .section
 	width: 820px
 
+.section__banner
+	background-image: url(/images/banner.png)
+	height: 193px
+
+.section__banner-text
+	color: #fff
+	padding-left: 240px
+	padding-top: 45px
+	// padding-bottom:
+	p
+		padding: 0
+		margin: 0 
+		line-height: 0.9
+
+	p:nth-child(1)
+		font-size: 39px
+		font-weight: 900
+
+	p:nth-child(2)
+		font-size: 57px
+		font-weight: 900
+
+	p:nth-child(3)
+		font-size: 21px
+		font-weight: 300
 	
 	
 	
