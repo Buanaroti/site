@@ -3,10 +3,12 @@
 	display: flex
 	justify-content: space-between
 
+// sidebar
+
 .sidebar
 	width: 275px
 
-.sidebar__state
+.sidebar-state
 	border: 1px solid $border_color
 	box-shadow: 0px 4px 9px 0px rgba(45, 44, 45, 0.20)
 	margin-bottom: 20px
@@ -26,9 +28,7 @@
 			background-position: 10px
 			outline: none
 
-
-
-.sidebar__fastorder
+.sidebar-fastorder
 	display: flex
 	justify-content: center
 	border: 1px solid $border_color
@@ -39,7 +39,7 @@
 	p
 		margin: auto 0
 
-.sidebar__news
+.sidebar-news
 	h4
 		margin-bottom: 0
 	p
@@ -53,12 +53,14 @@
 		text-align: center
 		margin-top: 35px
 
-.section__banner
+// Banner
+
+.section-banner
 	background-image: url(../images/banner.jpg)
 	height: 194px
 	box-shadow: 0px 4px 9px 0px rgba(45, 44, 45, 0.20)
 
-.section__banner-text
+.section-banner__text
 	color: #fff
 	padding-left: 240px
 	padding-top: 45px
@@ -80,12 +82,14 @@
 		font-size: 21px
 		font-weight: 300
 
-.section__katalog
+// Katalog
+
+.section-katalog
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
 
-.section__katalog--wrap
+.section-katalog--wrap
 	width: 252px
 	height: 237px
 	display: flex
@@ -96,160 +100,41 @@
 		margin: 82% 10px 10px 10px
 		color: #fff
 
-.section__katalog-card
+.section-katalog__card
 	background-image: url(../images/card.jpg)
 
-.section__katalog-listovki
+.section-katalog__listovki
 	background-image: url(../images/listovki.jpg)
 
-.section__katalog-buklet
+.section-katalog__buklet
 	background-image: url(../images/buklet.jpg)
 
-.section__katalog-plakat
+.section-katalog__plakat
 	background-image: url(../images/plakat.jpg)
 
-.section__katalog-kalendar
+.section-katalog__kalendar
 	background-image: url(../images/kalendar.jpg)
 
-.section__katalog-broshura
+.section-katalog__broshura
 	background-image: url(../images/broshura.jpg)
 
-.section__katalog-book
+.section-katalog__book
 	background-image: url(../images/book.jpg)
 
-.section__katalog-pechat
+.section-katalog__pechat
 	background-image: url(../images/pechat.jpg)
 
-.section__katalog-more
-	background-image: url(../images/more.jpg)	
+.section-katalog__more
+	background-image: url(../images/more.jpg)
+
+// otziv
+
+.section-otziv__i--text
+	width: 67%
 	
-// //main-slider
-// .main-slider
-// 	.slick-dots
-// 		margin: 0
-// 		padding: 0
-// 		list-style-type: none
-// 		position: absolute
-// 		bottom: 20px
-// 		left: 50%
-// 		transform: translateX(-50%)
-// 		li 
-// 			margin: 0 10px
-// 			display: inline-block
-// 			&.slick-active
-// 				button
-// 					width: 15px
-// 					height: 15px
-// 			button
-// 				cursor: pointer
-// 				-webkit-appearance: none
-// 				display: inline-block
-// 				vertical-align: middle
-// 				padding: 0
-// 				width: 8px
-// 				height: 8px
-// 				background-color: #FFF
-// 				text-indent: -99999px
-// 				border: none
-// 				border-radius: 50%
-// 				&:focus
-// 					outline: none
+.section-otziv__i--photo
+	width: 33%
 
-// .main-slider__i
-// 	height: calc(100vh - 68px)
-// 	background-repeat: no-repeat 
-// 	background-position: center center
-// 	background-size: cover
-
-// .main-slider__i-wrap
-// 	height: 100%
-// 	display: flex
-// 	align-items: center
-
-// .main-slider__i-text
-// 	color: #fff
-// 	h3
-// 		margin: 0 0 20px
-// 		font-size: 70px
-// 		background-color: $green
-// 		padding: 0 15px
-// 	p 
-// 		margin: 0
-// 		font-size: 24px
-		
-
-
-// //tours
-// .tours__i
-// 	float: left
-// 	width: 25%
-// 	padding: 15px
-
-
-// .tours__i-card
-// 	box-shadow: 0 0 12px rgba(0,0,0,0.1)
-
-// .tours__i-img
-// 	img
-// 		display: block
-// 		width: 100%
-// 		height: auto
-
-// .tours__i-text
-// 	background-color: #FFF
-// 	padding: 12px 10px
-
-// .tours__i-name
-// 	margin-bottom: 20px
-// 	min-height: 40px
-
-// .tours__i-more
-// 	text-align: right
-// 	a
-// 		text-decoration: none
-// 		background-color: $green
-// 		color: #fff
-// 		padding: 10px 15px
-// 		display: inline-block
-// 		text-transform: uppercase
-// 		font-size: 13px
-// 		&:hover
-// 			background-color: darken($green,10%);
-
-// //team
-// .team
-// 	display: flex
-// 	justify-content: space-around
-// 	max-width: 960px
-// 	margin: 0 auto
-
-// .team__i
-// 	text-align: center
-
-// .team__i-img
-// 	width: 150px
-// 	margin: 0 auto 10px
-// 	img
-// 		width: 100%
-// 		height: auto
-// 		border-radius: 50%
-
-// .team__i-name
-// 	font-weight: 700
-// 	margin-bottom: 5px
-
-// .team__i-pos
-// 	font-size: 16px
-
-// //video
-// .video
-// 	display: flex
-// 	justify-content: space-around
-
-// .video__i
-// 	width: 47%
-
-// //map
-// .map
-// 	background-color: #f8f8f8
-// 	height: 450px
+.otziv-wrapper
+	display: flex
+	justify-content: space-around

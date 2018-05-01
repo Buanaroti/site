@@ -22,15 +22,15 @@ html(lang="ru")
 			//content
 			.wrap.content
 				aside.sidebar
-					.sidebar__state
+					.sidebar-state
 						p Узнать состояние заказа
 						form
 							input(type="text")
-					.sidebar__fastorder
+					.sidebar-fastorder
 						a(href="#")
 							img(src="images/download.png", alt="download")
 						p Загрузить файлы<br> для срочного заказа
-					.sidebar__news
+					.sidebar-news
 						h3 Новости
 						h4 20 апреля
 						p В Online print началась сезонная распродажа
@@ -45,57 +45,86 @@ html(lang="ru")
 						a(href="#") Все новости
 
 				section.section
-					.section__banner
-						.section__banner-text
+					.section-banner
+						.section-banner__text
 							p САМОЕ ВРЕМЯ
 							p ПЕЧАТАТЬ
 							p СЕЗОННЫЕ СКИДКИ ДО -70%
+
 					h1 Какая продукция вас интересует?
 
-					.section__katalog
-						a(href="#").section__katalog-card.section__katalog--wrap
+					// Каталог
+					.section-katalog
+						a(href="#").section-katalog__card.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-listovki.section__katalog--wrap
+						a(href="#").section-katalog__listovki.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-buklet.section__katalog--wrap
+						a(href="#").section-katalog__buklet.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-plakat.section__katalog--wrap
+						a(href="#").section-katalog__plakat.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-kalendar.section__katalog--wrap
+						a(href="#").section-katalog__kalendar.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-broshura.section__katalog--wrap
+						a(href="#").section-katalog__broshura.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-book.section__katalog--wrap
+						a(href="#").section-katalog__book.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-pechat.section__katalog--wrap
+						a(href="#").section-katalog__pechat.section-katalog--wrap
 							p от 0.5 &#8381
 							p Визитки
-						a(href="#").section__katalog-more.section__katalog--wrap
+						a(href="#").section-katalog__more.section-katalog--wrap
 							p Все категории
+					
+					//Отзывы
+					h1 Отзывы наших клиентов
+
+					.section-otziv.js-main-slider
+						.section-otziv__i
+							.otziv-wrapper
+								.section-otziv__i--text
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
+								.section-otziv__i--photo
+									img(src="/images/vala.jpg", alt="")
+									p Валентина Петровна
+									p "Колбасы из мяса"
+						.section-otziv__i
+							.otziv-wrapper
+								.section-otziv__i--text
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
+								.section-otziv__i--photo
+									img(src="/images/banner.jpg", alt="")
+									p Валентина Петровна
+									p "Колбасы из мяса"
+						.section-otziv__i
+							.otziv-wrapper
+								.section-otziv__i--text
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
+								.section-otziv__i--photo
+									img(src="/images/listovki.jpg", alt="")
+									p Валентина Петровна
+									p "Колбасы из мяса"
 						
 						
-			
-			//- //main-slider
+
+
 			//- .main-slider.js-main-slider
-			//- 	.main-slider__i(style="background-image: url(/images/slider/slide1.jpg);")
-			//- 		.wrap.main-slider__i-wrap
+			//- 	.main-slider__i
 			//- 			.main-slider__i-text
 			//- 				h3 Осень в Японии
 			//- 				p Для ценителей яркой красоты
-			//- 	.main-slider__i(style="background-image: url(/images/slider/slide2.jpg);")
-			//- 		.wrap.main-slider__i-wrap
+			//- 				img(src="/images/banner.jpg", alt="")
+			//- 	.main-slider__i(style="background-image: url(/images/listovki.jpg);")
 			//- 			.main-slider__i-text
 			//- 				h3 Храмы и пагоды
 			//- 				p Путешествие к истокам
-			//- 	.main-slider__i(style="background-image: url(/images/slider/slide3.jpg);")
-			//- 		.wrap.main-slider__i-wrap
+			//- 	.main-slider__i(style="background-image: url(/images/pechat.jpg);")
 			//- 			.main-slider__i-text
 			//- 				h3 Фудзи-сан
 			//- 				p Лучшие точки для съёмок
