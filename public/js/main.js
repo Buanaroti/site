@@ -1,12 +1,13 @@
 $(document).ready(function() {
 	//slider
 	$('.js-main-slider').slick({
-		dots: true, 
+		dots: false, 
 		arrows: false, 
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
-		autoplay: true
+		autoplay: true,
+		autoplaySpeed: 1000
 	});
 
 	//scroll-link

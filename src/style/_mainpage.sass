@@ -129,12 +129,43 @@
 
 // otziv
 
+.section-otziv
+	height: 273px
+
 .section-otziv__i--text
 	width: 67%
-	
+	margin-right: 65px
+	border-right: 7px solid $orange
+	position: relative
+	background: #88b7d5
+	&::after 
+		left: 100%
+		top: 50%
+		border: solid transparent
+		content: " "
+		height: 0
+		width: 0
+		position: absolute
+		pointer-events: none
+		border-color: rgba(136, 183, 213, 0)
+		border-left-color: $orange
+		border-width: 30px
+		margin-top: -30px
+	p
+		margin: 85px 80px 0 80px
+
 .section-otziv__i--photo
 	width: 33%
-
+	img
+		margin: auto
+	p
+		text-align: center
+		line-height: 0.3
+		margin-top: 20px
+		
 .otziv-wrapper
 	display: flex
 	justify-content: space-around
+
+.section-otziv__i--text
+	background-color: #eff3f7
