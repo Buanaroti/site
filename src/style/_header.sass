@@ -1,9 +1,9 @@
 .header
 	
-.header__top
+.header-top
 	background-color: #454445
 	
-.header__top-list
+.header-top__list
 	display: flex
 	justify-content: flex-end
 	li
@@ -16,20 +16,20 @@
 	a
 		color: #fff
 
-.header__middle
+.header-middle
 	display: flex
 	justify-content: space-between
 
 
-.header__middle-logo
+.header-middle__logo
 	margin: auto 0
 
-.header__middle-text
+.header-middle__text
 	margin: auto 0
 	p
 		margin: 0
 
-.header__middle-btn
+.header-middle__btn
 	margin: auto 0
 	a
 		display: block
@@ -41,7 +41,7 @@
 			background-color: $green
 			color: #fff
 
-.header__middle-contacts
+.header-middle__contacts
 	p:nth-child(1)
 		margin: 10px 0
 		font-size: 25.5px
@@ -50,18 +50,22 @@
 		color: $orange
 		margin: 0
 		font-size: 17px
+		border-bottom: 1px solid transparent
+		transition: all 0.3s ease
 		&:hover
-			color: #fda594
+			color: $orange
+			border-bottom: 1px solid $orange
+			
 	p:nth-child(3)
 		margin: 0
 		font-size: 15.1px
 		margin-bottom: 10px
 
-.header__bottom
+.header-bottom
 	border-top: 1px solid $border_color
 	box-shadow: 0px 9px 20px 0px rgba(45, 44, 45, 0.24)
 
-.header__bottom-list
+.header-bottom__list
 	display: flex
 	justify-content: space-between
 	li
