@@ -66,5 +66,9 @@
 	justify-content: space-between
 	li
 		padding: 10px 0
-	a:hover
-		color: $orange
+	a
+		border-bottom: 1px solid transparent
+		transition: all 0.3s ease	
+		&:hover
+			color: $orange
+			border-bottom: 1px solid $orange

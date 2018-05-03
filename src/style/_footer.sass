@@ -1,16 +1,32 @@
 .footer
-	background-color: #292825
+	background-color: $text
 	padding: 25px 0
 	color: rgba(255,255,255,0.7)
 	font-size: 16px
-
-.footer__wrap
-	display: flex
-	justify-content: space-between
-
-.footer__soc
 	a
-		display: inline-block
-		margin-left: 10px
+		color: rgba(255,255,255,0.7)
+
+.footer-wrap
+	display: flex
+	justify-content: space-between		
+
+.footer-wrap__kontacts
+	a
+		border-bottom: 1px solid transparent
+		transition: all 0.3s ease
 		&:hover
-			opacity: 0.7
+			color: $orange
+			border-bottom: 1px solid $orange
+	ul
+		margin-top: 10px
+	li
+		margin-bottom: 10px
+		img
+			margin-right: 15px
+
+// .footer-wrap__i
+// 	padding: 0 40px
+
+
+
+	
