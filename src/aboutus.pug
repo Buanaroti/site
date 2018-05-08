@@ -1,0 +1,88 @@
+mixin scripts(scripts)
+	each src in scripts
+		- src = 'js/' + src;
+		script(src=src)
+			
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=1180")
+		title Типография онлайн "Online print"
+		//css
+		link(rel="stylesheet" href="css/style.min.css")
+
+		//fonts
+		link(href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet")
+	body
+		.page
+			//header
+			include blocks/header
+
+			//content
+			.wrap.content
+				aside.sidebar
+					.sidebar-menu
+						ul
+							li.dropdown
+								a(href="#" data-toggle="dropdown") Первый пункт
+								ul.dropdown-menu
+									li
+										a(href="#") Подробнее
+									li
+										a(href="#") Расчитать
+									li
+										a(href="#") Быстрый заказ
+									li
+										a(href="#") Информация
+							li.dropdown
+								a(href="#" data-toggle="dropdown") Второй пункт
+								ul.dropdown-menu
+									li
+										a(href="#") Подробнее
+									li
+										a(href="#") Расчитать
+									li
+										a(href="#") Быстрый заказ
+									li
+										a(href="#") Информация
+							li.dropdown
+								a(href="#" data-toggle="dropdown") Третий пункт
+								ul.dropdown-menu
+									li
+										a(href="#") Подробнее
+									li
+										a(href="#") Расчитать
+									li
+										a(href="#") Быстрый заказ
+									li
+										a(href="#") Информация
+					.sidebar-state
+						p Узнать состояние заказа
+						form
+							input(type="text")
+					.sidebar-fastorder
+						a(href="#")
+							img(src="images/download.png", alt="download")
+						p Загрузить файлы<br> для срочного заказа
+					.sidebar-news
+						h3 Новости
+						h4 20 апреля
+						p В Online print началась сезонная распродажа
+						h4 18 марта
+						p Мы победили в конкурсе на лучшую типографию Нижнего Новгорода!
+						h4 5 марта
+						p Скидки девушкам в честь 8 марта до 50%!
+						h4 22 февраля
+						p Скидки мужчинам в честь 23 февраля до 50%!
+						h4 15 января
+						p Действует дополнительная скидка на комплексные заказы!
+						a(href="#") Все новости
+
+				section.section
+
+			// footer
+			include blocks/footer.pug
+
+		//scripts
+		+scripts(['jquery-3.2.1.min.js', 'slick.min.js', 'main.js'])
