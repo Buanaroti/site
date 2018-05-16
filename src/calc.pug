@@ -26,14 +26,17 @@ html(lang="ru")
 				section.section
 					h1.titleficha Печать тиражей – расчет стоимости онлайн
 					h2 Хотите узнать цену на печать тиражей онлайн? Наш калькулятор по вашим параметрам, позволит максимально точно рассчитать цену на тираж.
-					.section-calk
+					.section-list
 						.section-calk__param
+							h2 Листовая продукция
 							form(action="calculator.php", method="post")
-									label(for="1")
-										p Тираж
+								.form-wrap
+									.form-i
+										label(for="1") Тираж
 										input(type="text" name="Tiraz" id="1")
-									label(for="2")
-										p Формат изделия
+								.form-wrap
+									.form-i
+										label(for="2") Формат изделия
 										select(name="format" id="2")
 											option(value="") A1 (594*841мм)
 											option(value="") A2 (420*594мм)
@@ -42,8 +45,9 @@ html(lang="ru")
 											option(value="") A5 (148*210мм)
 											option(value="") A6 (105*158мм)
 											option(value="") Флаер (99*210мм)
-									label(for="3")
-										p Бумага
+								.form-wrap
+									.form-i
+										label(for="3") Бумага
 										select(name="papper" id="3")
 											option(value="") Офсетная 80г. (тонкая, как в принтере)
 											option(value="") Мелованная 130г. (тонкая. как у листовок)
@@ -54,38 +58,71 @@ html(lang="ru")
 											option(value="") Мелованная 300г. (самая плотная)
 											option(value="") Картон 310гр. (как у визиток)
 											option(value="") Самоклейка 80г.
-									label(for="4")
-										p Цветность
+								.form-wrap
+									.form-i
+										label(for="4") Цветность
 										select(name="color" id="4")
 											option(value="") 1+0 (черно-белая, односторонняя)
 											option(value="") 1+1 (черно-белая, двусторонняя)
 											option(value="") 4+0 (цветная, односторонняя)
 											option(value="") 4+4 (цветная, двусторонняя)
-									label(for="5")
-										p Ламинация
+								.form-wrap
+									.form-i
+										label(for="5") Ламинация
 										select(name="laminazia" id="5")
+											option(value="") Нет
 											option(value="") Глянцевая 30мк. (односторонняя)
 											option(value="") Глянцевая 30мк. (двухсторонняя)
 											option(value="") Матовая 30мк. (односторонняя)
 											option(value="") Матовая 30мк. (двухсторонняя)
 											option(value="") Софт-тач 30мк. (матовая, односторонняя, с эффектом резины)
 											option(value="") Матовая 30мк. (матовая, двухсторонняя, с эффектом резины)
-									label(for="6")
-										p Биговка
-										select(name="big" id="6")
+								.form-wrap
+									.form-i
+										label(for="6") Кругление углов
+										select(name="Kruglenie" id="6")
+											option(value="") Нет
+											option(value="") 1 угол
+											option(value="") 2 угола
+											option(value="") 3 угола
+											option(value="") 4 угола
+								.form-wrap
+									.form-i
+										label(for="7") Биговка
+										select(name="big" id="7")
+											option(value="") Нет
 											option(value="") 1 биг
 											option(value="") 2 бига
 											option(value="") 3 бига
 											option(value="") 4 бига
-									label(for="6")
-										p Фальц
-										select(name="falz" id="3")
+								.form-wrap
+									.form-i
+										label(for="8") Фальц
+										select(name="falz" id="8")
+											option(value="") Нет
 											option(value="") 1 фальц
 											option(value="") 2 фальца
 											option(value="") 3 фальца
 											option(value="") 4 фальца
-									input(type="submit" value="Отправить")
-			// footer
+								.form-wrap
+									.form-i
+										span Стоимость заказа 0 &#8381
+								
+								.form-wrap
+									.form-i__btn
+										input(type="submit" value="Отправить заказ")
+
+					.section-morelist
+						.section-calk__param
+							h2 Многостраничная продукция
+							form(action="calculator.php", method="post")
+								.form-wrap
+									.form-i
+										label(for="1") Тираж
+										input(type="text" name="Tiraz" id="1")
+					
+					
+		// footer
 			include blocks/footer.pug
 
 		//scripts

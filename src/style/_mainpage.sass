@@ -181,19 +181,50 @@
 	p
 		font-weight: bold
 
-
 // calc
 
-.section-calk
-	border: 1px solid $border_color
+.section-list, .section-morelist
+	border: 7px solid $orange
 	box-shadow: 0px 4px 9px 0px rgba(45, 44, 45, 0.20)
-	
-.section-calk__param
+	padding: 30px 0
+	margin-bottom: 20px
 	form
 		display: flex
 		flex-wrap: wrap
-	select, input, label
-		width: 50%
+		.form-wrap
+			width: 50%
+		.form-i
+			display: flex
+			flex-direction: column
+			width: 250px
+			margin: 0 auto
+			select, input
+				padding: 6px
+				margin-bottom: 20px
+		label
+			padding-bottom: 5px
+			width: 250px
+		.form-i__btn
+			width: 250px
+			margin: 0 auto
+			input
+				display: block
+				border: 0
+				padding: 6px 20px
+				color: #fff
+				background-color: $orange
+				border: 1px solid $orange
+				&:hover
+					background-color: #fff
+					color: $orange
+					border: 1px solid $orange
+
+.section-calk__param
+	h2
+		text-align: center
+		padding: 20px 0
+		font-size: 24px
+
 
 // otziv
 
