@@ -16,7 +16,7 @@
 				img(src="images/logo.png", alt="Online print")
 
 		.header-middle__text
-			p Круглосуточная онлайн <br>типография
+			span Круглосуточная онлайн <br>типография
 
 		.header-middle__btn
 			a.btn.btn-info(href="#open-modal") Заказ в 1 клик
@@ -31,12 +31,12 @@
 							input(type="text" name="Tiraz" id="1")
 							label(for="1") Дополнительня информация
 							input(type="text" name="Tiraz" id="1")
-							input(type="submit" value="Отправить заказ")
+							input.btn.btn-cta(type="submit" value="Отправить заказ")
 
-		.header-middle__contacts
-			p.header-middle__contacts-tel +7 (831) 123-45-67
-			a(href="#") заказать обратный звонок
-			p время работы: круглосуточно
+		.header-middle__contacts.flex-column
+			span.header-middle__contacts-tel + 7 (831) 123-45-67
+			a.btn-link(href="#") заказать обратный звонок
+			span время работы: круглосуточно
 
 	.header-bottom
 		ul.wrap.header-bottom__list
