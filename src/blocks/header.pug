@@ -14,14 +14,17 @@
 				a(href="") Регистрация
 				a(href="") Вход
 				a(href="") Корзина
-				a(href="") 0
+				span 0
 	.wrap.header-middle
-		.header-middle__logo
+		.header-middle__logo.flex-column
 			a(href="index.html")
 				img(src="images/logo.png", alt="Online print")
+			span Полиграфический онлайн сервис
 
-		.header-middle__text
-			span Круглосуточная онлайн <br>типография
+		.header-middle__text.flex-column
+			a(href="")
+				span Нижний Новгород
+			span.header-middle__text-description Выберите свой город для <br>отображения актуальной стоимости
 
 		.header-middle__btn
 			a.btn.btn-info(href="#open-modal") Заказ в 1 клик
@@ -43,19 +46,50 @@
 			a.btn-link-orange(href="#") заказать обратный звонок
 			span время работы: круглосуточно
 
+	//- menu
+
 	.header-bottom
-		ul.wrap.header-bottom__list
-			li
-				a.btn.btn-link-dark(href="aboutus.html") О нас
-			li
-				a.btn.btn-link-dark(href="calc.html") Онлайн калькулятор
-			li
-				a.btn.btn-link-dark(href="uslugi.html") Дополнительные услуги
-			li
-				a.btn.btn-link-dark(href="paydelevery.html") Оплата и доставка
-			li
-				a.btn.btn-link-dark(href="akcii.html") Акции
-			li
-				a.btn.btn-link-dark(href="contacts.html") Контакты
-			li
-				a.btn.btn-link-dark(href="textrebovania.html") Технические требования
+		nav.wrap
+			ul.flex-row.flex-space
+				//- 1 пункт
+				li.header-bottom__products
+					a.btn.btn-link-dark(href="calc.html") Продукция и услуги
+					ul
+						li
+							a(href="") Пункт № 1
+						li
+							a(href="") Пункт № 2
+						li
+							a(href="") Пункт № 3
+						li
+							a(href="") Пункт № 4
+						li
+							a(href="") Пункт № 5
+						li
+							a(href="") Пункт № 6
+						li
+							a(href="") Пункт № 7
+						li
+							a(href="") Пункт № 8
+				//- 2 пункт
+				li
+					a.btn.btn-link-dark(href="calc.html") Онлайн калькулятор
+				//- 3 пункт
+				li
+					a.btn.btn-link-dark(href="") Проверка макета
+				//- 4 пункт
+				li
+					a.btn.btn-link-dark(href="") Информация
+					ul
+						li
+							a.btn.btn-link-dark(href="textrebovania.html") Технические требования
+						li
+							a.btn.btn-link-dark(href="contacts.html") Контакты
+						li
+							a.btn.btn-link-dark(href="akcii.html") Акции
+						li
+							a.btn.btn-link-dark(href="paydelevery.html") Оплата и доставка
+						li
+							a.btn.btn-link-dark(href="uslugi.html") Дополнительные услуги
+						li
+							a.btn.btn-link-dark(href="aboutus.html") О нас

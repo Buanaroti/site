@@ -109,6 +109,11 @@ textarea
   overflow: auto
   resize: vertical
 
+.wrap
+	width: 1180px
+	margin: 0 auto
+	padding: 0 20px
+
 .column-6
 	flex: 0 0 100%
 	max-width: 100%
@@ -125,14 +130,17 @@ textarea
 	flex: 0 0 16.666666%
 	max-width: 16.666666%
 
-.wrap
-	width: 1180px
-	margin: 0 auto
-	padding: 0 20px
+.flex-row
+  display: flex
+  flex-direction: row !important
 
 .flex-column
   display: flex
   flex-direction: column !important
+
+.flex-space
+  display: flex
+  justify-content: space-between
 
 .btn
   display: inline-block

@@ -11,11 +11,14 @@
 	a
 		color: #fff
 		margin: 2px 8px
-	a:nth-child(4)
+		&:hover
+			color: $orange
+	span
 		background-color: $orange
-		border-radius: 3px
-		padding: 0 4px
-		margin-right: 0
+		color: #fff
+		margin: 2px auto
+		padding: 0 5px
+		border-radius: 4px
 
 .header-top__list-social
 	a
@@ -24,6 +27,16 @@
 .header-middle
 	display: flex
 	justify-content: space-between
+
+.header-middle__text
+	a
+		text-decoration: underline
+		color: $dark
+		&:hover
+			color: $orange
+.header-middle__text-description
+	color: $pcolor
+	font-size: 13px
 
 // modal
 .header-middle__btn
@@ -85,6 +98,9 @@
 	
 .header-middle__logo
 	margin: auto 0
+	span
+		letter-spacing: 0.9px
+   		margin-top: -2px
 
 .header-middle__text
 	margin: auto 0
@@ -101,25 +117,37 @@
 		margin: 0
 		font-size: 15.1px
 		margin-bottom: 10px
-
+		
+// menu
 .header-bottom
 	border-top: 1px solid $border_color
 	box-shadow: 0px 9px 20px 0px rgba(45, 44, 45, 0.24)
+	nav
+		ul
+			padding: 0
+			margin: 0
+			list-style: none
+			position: relative
+			ul
+				// display: none
+				position: absolute
+				li
+					background-color: $orange
+					width: inherit
 
-.header-bottom__list
+			ul:nth-child(1)
+				
+
+			li:hover > ul
+				display: inherit
+				li
+					// background-color: $orange
+
+.header-bottom__products
+	width: 275px
 	a
-	color: $dark
-	display: flex
-	justify-content: space-between
-	li
-		padding: 10px 0
-		list-style-type: none
-	li:nth-child(1)
+		padding-left: 0
+	ul > li
+		padding: 10px
 		a
-			padding-left: 0
-	li:nth-last-child(1)
-		a
-			padding-right: 0
-	
-   
-   
+			color: $dark
