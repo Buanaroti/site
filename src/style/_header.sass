@@ -1,20 +1,25 @@
-.header
-	
 .header-top
 	background-color: $dark
-	
+
 .header-top__list
 	display: flex
+	justify-content: space-between
+
+.header-top__list-enter
+	display: flex
 	justify-content: flex-end
-	li
-		display: inline-block
-		margin-left: 16px
-	ul :nth-child(4)
-		background-color: $orange
-		padding: 1px 11px
-		border-radius: 5px
 	a
 		color: #fff
+		margin: 2px 8px
+	a:nth-child(4)
+		background-color: $orange
+		border-radius: 3px
+		padding: 0 4px
+		margin-right: 0
+
+.header-top__list-social
+	a
+		margin-right: 10px
 
 .header-middle
 	display: flex
@@ -23,7 +28,6 @@
 // modal
 .header-middle__btn
 	margin: auto 0
-
 	.modal-window
 		position: fixed
 		background-color: rgba(61, 60, 61, 0.75)
@@ -103,13 +107,19 @@
 	box-shadow: 0px 9px 20px 0px rgba(45, 44, 45, 0.24)
 
 .header-bottom__list
+	a
+	color: $dark
 	display: flex
 	justify-content: space-between
 	li
 		padding: 10px 0
-	a
-		border-bottom: 1px solid transparent
-		transition: all 0.3s ease	
-		&:hover
-			color: $orange
-			border-bottom: 1px solid $orange
+		list-style-type: none
+	li:nth-child(1)
+		a
+			padding-left: 0
+	li:nth-last-child(1)
+		a
+			padding-right: 0
+	
+   
+   
