@@ -13,8 +13,10 @@ html(lang="ru")
 		link(rel="stylesheet" href="css/style.min.css")
 
 		//fonts
-		//- link(href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet")
 		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+
+		//- Add icon library
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
 		
 	body
 		.page
@@ -28,31 +30,34 @@ html(lang="ru")
 						span Добро поржаловать!
 			.wrap.content
 				aside.sidebar
-					.sidebar-state
-						p Узнать состояние заказа
-						form
-							input(type="text")
-					.sidebar-fastorder
-						a(href="#")
-							img(src="images/download.png", alt="download")
-						p Загрузить файлы<br> для срочного заказа
-					.sidebar-news
-						h3 Новости
-						h4 20 апреля
-						p В Online print началась сезонная распродажа
-						h4 18 марта
-						p Мы победили в конкурсе на лучшую типографию Нижнего Новгорода!
-						h4 5 марта
-						p Скидки девушкам в честь 8 марта до 50%!
-						h4 22 февраля
-						p Скидки мужчинам в честь 23 февраля до 50%!
-						h4 15 января
-						p Действует дополнительная скидка на комплексные заказы!
-						a(href="#") Все новости
+					include blocks/sidebar
 
 				section.section
 					// Каталог
 					h1.titleficha Какая продукция вас интересует?
+					
+					.tabs
+						button#defaultOpen(class="tablinks" onclick="openCity(event, 'London')") Популярное
+						button(class='tablinks' onclick="openCity(event, 'Paris')") Paris
+						button(class='tablinks' onclick="openCity(event, 'Tokyo')") Tokyo
+
+					.tabcontent#London.flex-space
+						h3 Популярное
+						a(href="card.html").section-katalog__card.section-katalog--wrap.hvr-wobble-vertical
+							p от 0.5 &#8381
+							p Визитки
+						a(href="listovki.html").section-katalog__listovki.section-katalog--wrap.hvr-wobble-vertical
+							p от 1 &#8381
+							p Листовки
+						a(href="buklet.html").section-katalog__buklet.section-katalog--wrap.hvr-wobble-vertical
+							p от 2 &#8381
+							p Буклеты
+					.tabcontent#Paris
+						h3 Paris
+						p Lor quia reprehenderit dolor sequi molestias adipisci accusantium sit esse rerum! Suscipit neque voluptate non animi vero eaque corrupti consequatur dolore eveniet?
+					.tabcontent#Tokyo
+						h3 Tokyo
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quia reprehenderit dolor sequi molestias adipisci accusantium sit esse rerum! Suscipit neque voluptate non animi vero eaque corrupti consequatur dolore eveniet?
 
 					.section-katalog
 						a(href="card.html").section-katalog__card.section-katalog--wrap.hvr-wobble-vertical
