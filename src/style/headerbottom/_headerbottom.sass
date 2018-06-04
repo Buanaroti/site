@@ -1,0 +1,44 @@
+.headerbottom
+    border-top: 1px solid $pcolor
+    border-bottom: 1px solid $pcolor
+
+.headerbottom__navbar
+
+.headerbottom__button
+    background-color: #ffffff
+    border: none
+    color: $dark
+    padding: 16px
+    font-weight: 600
+    font-size: 15px
+    letter-spacing: 1px
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+.headerbottom__left
+    position: relative
+    display: inline-block
+
+.headerbottom__content
+    display: none
+    position: absolute
+    background-color: #f1f1f1
+    min-width: 160px
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+    z-index: 1
+
+.headerbottom__link
+    color: black
+    padding: 12px 16px
+    text-decoration: none
+    display: block
+    &:hover
+        background-color: $orange
+
+.headerbottom__left:hover 
+    .headerbottom__content
+        display: block
+
+.headerbottom__left:hover
+    .headerbottom__button
+        background-color: $green
+        color: #fff
