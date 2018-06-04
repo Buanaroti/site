@@ -4,15 +4,12 @@
 	box-sizing: border-box
 
 html
-	font-family: sans-serif
-	line-height: 1.15
 	-webkit-text-size-adjust: 100%
 	-ms-text-size-adjust: 100%
 	-ms-overflow-style: scrollbar
 	-webkit-tap-highlight-color: transparent
 
 body
-  margin: 0
   font-family: Montserrat, Open Sans, Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   font-size: 1rem
   font-weight: 400
@@ -23,8 +20,8 @@ body
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
-  margin-bottom: 0.5rem
   color: $dark
+  font-weight: 400
 
 p
   margin-top: 0
@@ -35,7 +32,6 @@ ol,
 ul,
 dl
   margin-top: 0
-  margin-bottom: 1rem
 
 ol ol,
 ul ul,
@@ -44,13 +40,13 @@ ul ol
   margin-bottom: 0
 
 a
-  color: $orange
   text-decoration: none
   background-color: transparent
   -webkit-text-decoration-skip: objects
+  color: #14AAF5
 
 a:hover
-  color: #0056b3
+  color: $dark
 
 img
   vertical-align: middle
@@ -81,7 +77,10 @@ textarea
 	flex: 0 0 16.666666%
 	max-width: 16.666666%
 
-.flex-row
+.flex-wrap
+ flex-wrap: wrap
+
+.flex-inline
   display: flex
   flex-direction: row !important
 
@@ -142,22 +141,6 @@ textarea
 
 // button to link orange
 .btn-link-orange
-  &:after
-    content: ''
-    display: block
-    width: 0
-    height: 2px
-    background: $orange
-    transition: width .3s
-  &:hover:after
-    width: 100%
-    transition: width .4s
-  &:hover
-    color: $orange
-
-// button to link dark
-.btn-link-dark
-  color: $dark
   &:after
     content: ''
     display: block

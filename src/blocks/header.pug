@@ -1,122 +1,24 @@
-.header
-	.header-top
-		.wrap.header-top__list
-			.header-top__list-social
-				a(href="#")
-					img(src="images/instagram.png", alt="")
-				a(href="#")
-					img(src="images/facebook.png", alt="")
-				a(href="#")
-					img(src="images/vk.png", alt="")
-				a(href="#")
-					img(src="images/whatsapp.png", alt="")
-			.header-top__list-enter
-				a(href="") Регистрация
-				a(href="") Вход
-				a(href="") Корзина
-				span 0
-	.wrap.header-middle
-		.header-middle__logo.flex-column
-			a(href="index.html")
-				img(src="images/logo.svg", alt="Online print")
-			span Полиграфический онлайн сервис
+header.header
 
-		.header-middle__text.flex-column
-			a(href="")
-				span Нижний Новгород
-			span.header-middle__text-description Выберите свой город для <br>отображения актуальной стоимости
+    .headertop
 
-		.header-middle__btn
-			a.btn.btn-info(href="#open-modal") Заказ в 1 клик
-			.modal-window#open-modal
-				div
-					a.modal-close(href="#modal-close" tittle="Close") Закрыть
-					.feedback
-						form(action="feedback")
-							label(for="1") Ваш телефон
-							input(type="text" name="Tiraz" id="1")
-							label(for="1") Ваш email
-							input(type="text" name="Tiraz" id="1")
-							label(for="1") Дополнительня информация
-							input(type="text" name="Tiraz" id="1")
-							input.btn.btn-cta(type="submit" value="Отправить заказ")
+        .wrap.flex-space
 
-		.header-middle__contacts.flex-column
-			span.header-middle__contacts-tel + 7 (831) 123-45-67
-			a.btn-link-orange(href="#") заказать обратный звонок
-			span время работы: круглосуточно
+            .social.headertop__social
+                a.social__link(href="#")
+                    img.social__pic(src="/images/vk.png", alt="vk")
+                a.social__link(href="#")
+                    img.social__pic(src="/images/instagram.png", alt="instagram")
+                a.social__link(href="#")
+                    img.social__pic(src="/images/facebook.png", alt="facebook")
+                a.social__link(href="#")
+                    img.social__pic(src="/images/whatsapp.png", alt="whatsapp")
 
-	//- menu
+            .headertop__enter
+                a.link.headertop__list(href="#") Регистрация
+                a.link.headertop__list(href="#") Вход
+                a.link.headertop__list(href="#") Корзина
+                a.link.headertop__list.headertop__list_orange(href="#") 0
 
-	.header-bottom
-		.header-bottom__navbar.wrap
-			.dropdown
-				button.dropbth.btn ПРОДУКЦИЯ И УСЛУГИ
-					i.fa.fa-caret-down
-				.dropdown-content
-					.content-header
-						h2 Header
-					.row
-						.column
-							h3 Category 1
-							a(href="#") Визитки
-							a(href="#") Листовки
-							a(href="#") Плакаты
-						.column
-							h3 Category 2
-							a(href="#") Визитки
-							a(href="#") Листовки
-							a(href="#") Плакаты
-						.column
-							h3 Category 3
-							a(href="#") Визитки
-							a(href="#") Листовки
-							a(href="#") Плакаты
-			navbar-right.flex-end
-				a(href="#") ОНЛАЙН КАЛЬКУЛЯТОР
-				a(href="#") ПРОВЕРКА МАКЕТА
-				a(href="#") ИНФОРМАЦИЯ
-
-
-		//- nav.wrap
-		//- 	ul.flex-row.flex-space
-		//- 		//- 1 пункт
-		//- 		li.header-bottom__products
-		//- 			a.btn.btn-link-dark(href="calc.html") Продукция и услуги
-		//- 			ul
-		//- 				li
-		//- 					a(href="") Пункт № 1
-		//- 				li
-		//- 					a(href="") Пункт № 2
-		//- 				li
-		//- 					a(href="") Пункт № 3
-		//- 				li
-		//- 					a(href="") Пункт № 4
-		//- 				li
-		//- 					a(href="") Пункт № 5
-		//- 				li
-		//- 					a(href="") Пункт № 6
-		//- 				li
-		//- 					a(href="") Пункт № 7
-		//- 				li
-		//- 					a(href="") Пункт № 8
-		//- 		//- 2 пункт
-		//- 		li
-		//- 			a.btn.btn-link-dark(href="calc.html") Онлайн калькулятор
-		//- 		//- 3 пункт
-		//- 		li
-		//- 			a.btn.btn-link-dark(href="") Проверка макета
-		//- 		//- 4 пункт
-		//- 		li.header-bottom__info
-		//- 			a.btn.btn-link-dark(href="") Информация
-		//- 			ul
-		//- 				li
-		//- 					a.btn.btn-link-dark(href="textrebovania.html") Технические требования
-		//- 				li
-		//- 					a.btn.btn-link-dark(href="contacts.html") Контакты
-		//- 				li
-		//- 					a.btn.btn-link-dark(href="akcii.html") Акции
-		//- 				li
-		//- 					a.btn.btn-link-dark(href="paydelevery.html") Оплата и доставка
-		//- 				li
-		//- 					a.btn.btn-link-dark(href="aboutus.html") О нас
+    .headermiddle
+    .headerbottom
