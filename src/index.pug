@@ -8,144 +8,21 @@ html(lang="ru")
 	head
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=1180")
-		title Типография онлайн "Online print"
+		title Типография онлайн "Online print"		
 		//css
 		link(rel="stylesheet" href="css/style.min.css")
-
 		//fonts
 		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
-
-		// Add icon library
-		link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
-
 		// Favicon
 		link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
 		
 	body
-		.page
-			//header
-			include blocks/header
-
-			//content
-			.under-menu
-				.wrap.flex-end
-					.under-menu__text
-						span Добро поржаловать!
-			.wrap.content
-				aside.sidebar
-					include blocks/sidebar
-
-				section.section
-					// Каталог
-					h1.titleficha Какая продукция вас интересует?
-					
-					.tabs
-						button#defaultOpen(class="tablinks" onclick="openCity(event, 'London')") Популярное
-						button(class='tablinks' onclick="openCity(event, 'Paris')") Paris
-						button(class='tablinks' onclick="openCity(event, 'Tokyo')") Tokyo
-
-					.tabcontent#London.flex-space
-						h3 Популярное
-						a(href="card.html").section-katalog__card.section-katalog--wrap.hvr-wobble-vertical
-							p от 0.5 &#8381
-							p Визитки
-						a(href="listovki.html").section-katalog__listovki.section-katalog--wrap.hvr-wobble-vertical
-							p от 1 &#8381
-							p Листовки
-						a(href="buklet.html").section-katalog__buklet.section-katalog--wrap.hvr-wobble-vertical
-							p от 2 &#8381
-							p Буклеты
-					.tabcontent#Paris
-						h3 Paris
-						p Lor quia reprehenderit dolor sequi molestias adipisci accusantium sit esse rerum! Suscipit neque voluptate non animi vero eaque corrupti consequatur dolore eveniet?
-					.tabcontent#Tokyo
-						h3 Tokyo
-						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut quia reprehenderit dolor sequi molestias adipisci accusantium sit esse rerum! Suscipit neque voluptate non animi vero eaque corrupti consequatur dolore eveniet?
-
-					.section-katalog
-						a(href="card.html").section-katalog__card.section-katalog--wrap.hvr-wobble-vertical
-							p от 0.5 &#8381
-							p Визитки
-						a(href="listovki.html").section-katalog__listovki.section-katalog--wrap.hvr-wobble-vertical
-							p от 1 &#8381
-							p Листовки
-						a(href="buklet.html").section-katalog__buklet.section-katalog--wrap.hvr-wobble-vertical
-							p от 2 &#8381
-							p Буклеты
-						a(href="plakat.html").section-katalog__plakat.section-katalog--wrap.hvr-wobble-vertical
-							p от 2 &#8381
-							p Плакаты
-						a(href="kalendari.html").section-katalog__kalendar.section-katalog--wrap.hvr-wobble-vertical
-							p от 12 &#8381
-							p Календари
-						a(href="broshura.html").section-katalog__broshura.section-katalog--wrap.hvr-wobble-vertical
-							p от 8 &#8381
-							p Брошюра
-						a(href="book.html").section-katalog__book.section-katalog--wrap.hvr-wobble-vertical
-							p от 22 &#8381
-							p Книги
-						a(href="pechati.html").section-katalog__pechat.section-katalog--wrap.hvr-wobble-vertical
-							p от 500 &#8381
-							p Печати
-						a(href="#").section-katalog__more.section-katalog--wrap.hvr-wobble-vertical
-							p Все категории
-					
-					//Отзывы
-					h1.titleficha Отзывы наших клиентов
-
-					.section-otziv.js-slider-otziv
-						.section-otziv__i
-							.otziv-wrapper
-								.section-otziv__i--text
-									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
-								.section-otziv__i--photo
-									img(src="images/vala.png", alt="")
-									p Оксана Победова
-									p Аптечная сеть "Валли" 
-						.section-otziv__i
-							.otziv-wrapper
-								.section-otziv__i--text
-									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
-								.section-otziv__i--photo
-									img(src="images/miha.png", alt="")
-									p Михаил Дрозд
-									p Пекарня "У дома"
-						.section-otziv__i
-							.otziv-wrapper
-								.section-otziv__i--text
-									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								.section-otziv__i--photo
-									img(src="images/kate.png", alt="")
-									p Екатерина Александрова
-									p SPA салон "Желание"
-
-					// Клиенты
-					h1.titleficha Наши клиенты
-
-					.section-klient.js-slider-klient
-						img(src="images/logo/alfa-bank.png", alt="")
-						img(src="images/logo/gazprom.png", alt="")
-						img(src="images/logo/kamaz.png", alt="")
-						img(src="images/logo/sberbank.png", alt="")
-						img(src="images/logo/leroy_merlin.png", alt="")
-						img(src="images/logo/magnit.png", alt="")
-						img(src="images/logo/meridian.png", alt="")
-						img(src="images/logo/pyaterochka_.png", alt="")
-						img(src="images/logo/vtb.png", alt="")
-
-					// Наше оборудование
-					h1.titleficha Оборудование
-					.section-equipment
-						img(src="images/heidelberg.jpg", alt="")
-						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores laborum dicta, maxime facere adipisci laudantium nulla atque aliquam, iste eius iure doloremque aspernatur ipsam veritatis cum nemo eos eveniet enim.	
-
-					// Обратная связь
-					.section-feedback
-						h1 Не нашли что искали? Свяжитесь с нами!
-						a.btn.btn-info(href="#open-modal") Позвонить нам
-
-			// footer
-			include blocks/footer.pug
+		//header
+		include blocks/header.pug
+		//content
+		
+		// footer
+		include blocks/footer.pug
 
 		//scripts
-		+scripts(['jquery-3.2.1.min.js', 'slick.min.js', 'main.js'])
+		+scripts(['jquery-3.2.1.min.js', 'main.js'])
