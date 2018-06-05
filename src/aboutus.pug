@@ -1,0 +1,113 @@
+mixin scripts(scripts)
+	each src in scripts
+		- src = 'js/' + src;
+		script(src=src)
+			
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=1180")
+		title Типография онлайн "Online print"
+		//css
+		link(rel="stylesheet" href="css/style.min.css")
+
+		//fonts
+		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+	body
+		.page
+			//header
+			include blocks/header
+
+			//content
+			.wrap.content
+				include blocks/sidebar.pug
+
+				section.section
+					//aboutus
+					h1.titleficha Кто мы такие?
+					.section-aboutus
+						p Наша онлайн-типография дает возможность клиенту самостоятельно создать, разместить и оплатить заказ прямо на сайте. Обработка заказа и печать происходит в максимально короткие сроки, а доставка осуществляется любым удобным способом. Печать производится на собственном современном оборудовании, а это означает сравнительно низкую стоимость за счет отсутствия посредников, но при этом вся наша продукция высокого класса. Главные преимущества типографии ONLINEPRINT — это отсутствие очередей, возможность оформить заказ там, где вам удобно это сделать, в любое время суток.
+					
+					//advantages
+					h1.titleficha Наши преимущества
+					.section-advantages
+						.section-advantages__i
+							img(src="images/piggy-bank.png", alt="")
+							p Низкая цена и высокое качество
+						.section-advantages__i
+							img(src="images/time-is-money.png", alt="")
+							p Соблюдение сроков
+						.section-advantages__i
+							img(src="images/presentation.png", alt="")
+							p Индивидулаьный подход к каждому клиенту
+						.section-advantages__i
+							img(src="images/open.png", alt="")
+							p Опыт работы 17 лет
+						.section-advantages__i
+							img(src="images/price-tag.png", alt="")
+							p Специальная программа лояльности для партнеров
+						.section-advantages__i
+							img(src="images/delivery-cart.png", alt="")
+							p Все виды доставки
+						.section-advantages__i
+							img(src="images/graph.png", alt="")
+							p Лучшее оборудование на рынке
+						.section-advantages__i
+							img(src="images/coins.png", alt="")
+							p Все виды оплаты
+
+					// equipment
+					h1.titleficha Оборудование
+					.section-equipment
+						img(src="images/heidelberg.jpg", alt="")
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores laborum dicta, maxime facere adipisci laudantium nulla atque aliquam, iste eius iure doloremque aspernatur ipsam veritatis cum nemo eos eveniet enim.
+					// Клиенты
+					h1.titleficha Наши клиенты
+					.section-klient.js-slider-klient
+						img(src="images/logo/alfa-bank.png", alt="")
+						img(src="images/logo/gazprom.png", alt="")
+						img(src="images/logo/kamaz.png", alt="")
+						img(src="images/logo/sberbank.png", alt="")
+						img(src="images/logo/leroy_merlin.png", alt="")
+						img(src="images/logo/magnit.png", alt="")
+						img(src="images/logo/meridian.png", alt="")
+						img(src="images/logo/pyaterochka_.png", alt="")
+						img(src="images/logo/vtb.png", alt="")
+					//Отзывы
+					h1.titleficha Отзывы наших клиентов
+					.section-otziv.js-slider-otziv
+						.section-otziv__i
+							.otziv-wrapper
+								.section-otziv__i--text
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
+								.section-otziv__i--photo
+									img(src="images/vala.png", alt="")
+									p Оксана Победова
+									p Аптечная сеть "Валли" 
+						.section-otziv__i
+							.otziv-wrapper
+								.section-otziv__i--text
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam neque officiis, repellendus omnis inventore reprehenderit dolores non molestias asperiores. Nemo necessitatibus est perspiciatis numquam sed libero, officia voluptates aperiam iusto.
+								.section-otziv__i--photo
+									img(src="images/miha.png", alt="")
+									p Михаил Дрозд
+									p Пекарня "У дома"
+						.section-otziv__i
+							.otziv-wrapper
+								.section-otziv__i--text
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								.section-otziv__i--photo
+									img(src="images/kate.png", alt="")
+									p Екатерина Александрова
+									p SPA салон "Желание"
+					// Обратная связь
+					.section-feedback
+						h1 Не нашли что искали? Свяжитесь с нами!
+						.section-feedback__btn.btn
+							a(href="#open-modal") Позвонить нам
+			// footer
+			include blocks/footer.pug
+
+		//scripts
+		+scripts(['jquery-3.2.1.min.js', 'slick.min.js', 'main.js'])
