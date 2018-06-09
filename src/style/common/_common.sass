@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+html
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	-ms-overflow-style: scrollbar
+	-webkit-tap-highlight-color: transparent
+
+body
+  font-family: Montserrat, Open Sans, Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+  color: #212529
+  text-align: left
+  background-color: #fff
+
+h1, h2, h3, h4, h5, h6
+  margin-top: 0
+  color: $dark
+  font-weight: 400
+
+p
+  margin-top: 0
+  margin-bottom: 1rem
+  color: $pcolor
+
+ol,
+ul,
+dl
+  margin-top: 0
+
+ol ol,
+ul ul,
+ol ul,
+ul ol
+  margin-bottom: 0
+
+img
+  vertical-align: middle
+  border-style: none
+
+textarea
+  overflow: auto
+  resize: vertical
+
+.wrap
+	width: 1180px
+	margin: 0 auto
+	padding: 0 20px
+
+.column-6
+	flex: 0 0 100%
+	max-width: 100%
+
+.column-3
+	flex: 0 0 50%
+	max-width: 50%
+
+.column-2
+	flex: 0 0 33.333333%
+	max-width: 33.333333%
+
+.column-1
+	flex: 0 0 16.666666%
+	max-width: 16.666666%
+
+.flex-wrap
+ flex-wrap: wrap
+
+.flex-inline
+  display: flex
+  flex-direction: row !important
+
+.flex-column
+  display: flex
+  flex-direction: column !important
+
+.flex-space
+  display: flex
+  justify-content: space-between
+
+.flex-end
+  display: flex
+  justify-content: flex-end
+
+.flex-vertical
+  display: flex
+  align-items: center
+
+// border shadow
+.border-shdw
+  border-radius: 2px
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1)
+
+// background color
+.bgc-grey
+  background-color: #f8fafb
+  

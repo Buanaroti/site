@@ -15,7 +15,12 @@ html(lang="ru")
 		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
 		// Favicon
 		link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
-		
+		// animate css
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		script(src="js/wow.min.js")
+		script.
+			new WOW().init();
+
 	body
 		//header
 		include blocks/header.pug
@@ -44,21 +49,21 @@ html(lang="ru")
 		
 		//advantages
 		.advantages.flex-space.wrap
-			.advantages__item
+			.advantages__item.fadeInRight.animated.wow
 				.advantages__img
 					img(src="images/medal.png", alt="medal")
 				.advantages__title
 					h3 ВЫСОЧАЙШЕЕ КАЧЕСТВО
 				.advantages__text
 					p Наше оборудование позволяет нам предоставить вам высочайшее качесвто печати при низких ценах
-			.advantages__item
+			.advantages__item.fadeInRight.animated.wow
 				.advantages__img
 					img(src="images/speed.png", alt="speed")
 				.advantages__title
 					h3 СКОРОСТЬ ПЕЧАТИ
 				.advantages__text
 					p Наш штат менеджеров более 30 человек, поэтому мы вовремя обработаем ваш заказ
-			.advantages__item
+			.advantages__item.fadeInRight.animated.wow
 				.advantages__img
 					img(src="images/money.png", alt="money")
 				.advantages__title
@@ -68,75 +73,63 @@ html(lang="ru")
 						
 		//categories
 		.body__categories.bgc-grey
-			.categories.advantages.flex-space.wrap.flex-wrap
+			.categories__title
+				h1 Категории
+			.categories.flex-space.wrap.flex-wrap
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/card.png", alt="card")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Визитки
+						p.categories__p.flex-vertical Создадим визитку бесплатно при заказе от 2000 штук!
+						a(href="#").button.button_view-action.categories__btn Подробнее
+				.categories__item.border-shdw
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/listovki.png", alt="listovki")
+					.categories__text
+						Span.categories__span Листовки
+						p.categories__p.flex-vertical Создадим листовку бесплатно при заказе от 5000 штук!
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/bukleti.png", alt="bukleti")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Буклеты
+						p.categories__p.flex-vertical Наша типография печатает все виды булетов.
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/plakat.png", alt="plakat")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Плакаты
+						p.categories__p.flex-vertical Мы печатаем плакаты в Нижнем Новгороде по самой низкой цене.
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/broshura.png", alt="broshura")
 					.categories__text
-						Span Title
-						h4 Titl2 dlinee
-						p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Брошюры
+						p.categories__p.flex-vertical Печать брошюр в Нижнем Новгороде хорошего качества
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/books.png", alt="books")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Журналы
+						p.categories__p.flex-vertical Печать журналов в Нижнем Новгроде по низкой цене и с хорошим качеством.
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/kalendar.png", alt="kalendar")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Календари
+						p.categories__p.flex-vertical Закажите печать квартальных календарей в Нижнем Новгороде у нас.
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/pechat.png", alt="pechat")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Изготовление печатей
+						p.categories__p.flex-vertical Изготовление печатей в Нижнем Новгороде по низкой цене.
 						a(href="#").button.button_view-action Подробнее
 				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
+					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/other.png", alt="other")
 					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
+						Span.categories__span Другие виды продукции и услуги
+						p.categories__p.flex-vertical Мы всегда рады нашим клиентам и постоянно расширяем спектр производимых товаров
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw(src="/images/books.png", alt="books")
-					.categories__text
-						Span.categories__span Title
-						h4.categories__h4 Titl2 dlinee
-						p.categories__p Lorem Lorem Lorem Lorem LoremLoremvLoremvLorem Lorem Lorem LoremLorem
-						a(href="#").button.button_view-action Подробнее
-
-
-
-
-
 
 		// footer
 		include blocks/footer.pug
