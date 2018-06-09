@@ -1,3 +1,5 @@
+// dropdown block
+    
 .dropdown
     position: relative
     display: inline-block
@@ -11,6 +13,11 @@
     font-size: 15px
     letter-spacing: 1px
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+
+.dropdown__popular
+    color: $orange
+    font-size: 15px
+    margin: 10px
 
 .dropdown__content
     width: 100%
@@ -39,16 +46,17 @@
         background-color: $green
         color: #fff
 
-// Subnav
+// Subnav block
 
 .dropdown__link:hover
-    .dropdown__subnav
+    .dropdown-subnav
         display: block
+        color: $dark
 
-.dropdown__subnav
+.dropdown-subnav
     display: none
     position: absolute
-    background-color: #fff
+    background-color: #f1f1f1
     border-radius: 2px
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
     top: 0
@@ -57,5 +65,37 @@
     z-index: -1
     height: 100%
 
-.dropdown__title
-    margin: 10px
+.dropdown-subnav__title
+    margin: 15px 0px 20px 40px
+
+.dropdown-subnav__col-left
+    margin: 0px 20px 10px 40px
+ 
+.dropdown-subnav__col-right
+    margin: 0px 40px 20px 10px
+    th
+        padding-right: 30px
+
+.dropdown-subnav__form
+    width: 240px
+
+.dropdown-subnav__span
+    font-weight: 600
+
+.dropdown-subnav__span-size
+    margin-bottom: 10px
+    font-weight: 600
+
+.dropdown-subnav__span-cmyk
+    margin: 20px 0px 10px 0px
+    font-weight: 600
+
+.dropdown-subnav__more
+    margin-top: 20px
+
+.dropdown-subnav__view-button
+    padding: 2px 7px
+    &:hover
+        background-color: #eb5f50
+
+.dropdown-subnav__radio

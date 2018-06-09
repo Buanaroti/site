@@ -2,23 +2,23 @@ header.header
 
     .headertop
 
-        .wrap.flex-space
+        .wrap
+            .headertop__social.flex-space
+                .social
+                    a.social__link(href="#")
+                        img.social__pic(src="/images/vk.png", alt="vk")
+                    a.social__link(href="#")
+                        img.social__pic(src="/images/instagram.png", alt="instagram")
+                    a.social__link(href="#")
+                        img.social__pic(src="/images/facebook.png", alt="facebook")
+                    a.social__link(href="#")
+                        img.social__pic(src="/images/whatsapp.png", alt="whatsapp")
 
-            .social.headertop__social
-                a.social__link(href="#")
-                    img.social__pic(src="/images/vk.png", alt="vk")
-                a.social__link(href="#")
-                    img.social__pic(src="/images/instagram.png", alt="instagram")
-                a.social__link(href="#")
-                    img.social__pic(src="/images/facebook.png", alt="facebook")
-                a.social__link(href="#")
-                    img.social__pic(src="/images/whatsapp.png", alt="whatsapp")
-
-            .headertop__enter
-                a.headertop__list(href="#") Регистрация
-                a.headertop__list(href="#") Вход
-                a.headertop__list(href="#") Корзина
-                a.headertop__list.headertop__list_orange(href="#") 0
+                .headertop__enter
+                    a.headertop__list(href="#") Регистрация
+                    a.headertop__list(href="#") Вход
+                    a.headertop__list(href="#") Корзина
+                    a.headertop__list.headertop__list-view_orange(href="#") 0
     
     .headermiddle
 
@@ -42,25 +42,115 @@ header.header
                 span.headermiddle__time время работы: круглосуточно
 
     .headerbottom
-
-        .headerbottom__navbar.wrap.flex-space
-
+        .wrap.flex-space
             .dropdown.headerbottom__dropdown
                 .dropdown__button ПРОДУКЦИЯ И УСЛУГИ
                 .dropdown__content
-                    span.headerbottom__popular.flex-end Популярное
-                    a(href="").dropdown__link Визитки
-                        .dropdown__subnav
-                            h3.dropdown__title Печать визиток
+                    span.dropdown__popular.flex-end Популярное
+                    .dropdown__link Визитки
 
-                   
-                    a.dropdown__link Листовки
-                    a.dropdown__link(href="") Плакаты
-                    a.dropdown__link(href="") Буклеты
-                    a.dropdown__link(href="") Брошюры
-                    span.headerbottom__popular.flex-end Услуги
-                    a.dropdown__link(href="") Разработка дизайна
-                    a.dropdown__link(href="") Срочная печать
+
+                        .dropdown-subnav
+                            h3.dropdown-subnav__title Печать визиток
+                            .flex-space
+                                .dropdown-subnav__col-left
+                                    form(action="calc.php", method="post").dropdown-subnav__form.flex-column
+                                        span.dropdown-subnav__span-size Размер
+                                        select(name="size") 
+                                            option(value="90x50") 90x50 мм
+                                            option(value="90x50") 85x55 мм
+                                        span.dropdown-subnav__span-cmyk Цветность
+                                        label.dropdown-subnav__radio
+                                            input(type="radio", name="cmyk", checked)
+                                            span 
+                                                t Ч/б односторонняя
+                                        label.dropdown-subnav__radio
+                                            input(type="radio", name="cmyk")
+                                            span 
+                                                t Ч/б двухсторонняя
+                                        label.dropdown-subnav__radio
+                                            input(type="radio", name="cmyk")
+                                            span 
+                                                t Цветная односторонняя
+                                        label.dropdown-subnav__radio
+                                            input(type="radio", name="cmyk")
+                                            span 
+                                                t Цветная двухсторонняя
+                                    .dropdown-subnav__more
+                                        a(href="#").link Больше опций
+
+                                .dropdown-subnav__col-right
+                                    table
+                                        tr
+                                            th
+                                                span Количество
+                                            th
+                                                span Цена
+                                        tr
+                                            td
+                                                span 100 шт.
+                                            td
+                                                span 390
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+                                        tr
+                                            td
+                                                span 200 шт.
+                                            td
+                                                span 540
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+                                        tr
+                                            td
+                                                span 300 шт.
+                                            td
+                                                span 690
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+                                        tr
+                                            td
+                                                span 500 шт.
+                                            td
+                                                span 1300
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+                                        tr
+                                            td
+                                                span 1000 шт.
+                                            td
+                                                span 1600
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+                                        tr
+                                            td
+                                                span 2000 шт.
+                                            td
+                                                span 2400
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+                                        tr
+                                            td
+                                                span 5000 шт.
+                                            td
+                                                span 5500
+                                            td
+                                                a(href="#").button.button_view-action.dropdown-subnav__view-button
+                                                    img(src="/images/shopping.png", alt="shopping")
+
+
+                    .dropdown__link(href="") Листовки
+                    .dropdown__link(href="") Плакаты
+                    .dropdown__link(href="") Буклеты
+                    .dropdown__link(href="") Брошюры
+                    span.dropdown__popular.flex-end Услуги
+                    .dropdown__link(href="") Разработка дизайна
+                    .dropdown__link(href="") Срочная печать
 
             .headerbottom__right.flex-end
                 a(href="#").dropdown__button.headerbottom__link ОНЛАЙН КАЛЬКУЛЯТОР
