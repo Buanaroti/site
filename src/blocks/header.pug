@@ -15,17 +15,35 @@ header.header
                         img.social__pic(src="/images/whatsapp.png", alt="whatsapp")
 
                 .headertop__enter
-                    a.headertop__list(href="#") Регистрация
+                    a.headertop__list(onclick="document.getElementById('id01').style.display='block'" style="width:auto;") Регистрация
+                    //modal signup
+                    .modal#id01
+                        span.modal__close(onclick="document.getElementById('id01').style.display='none'" title="Close Modal") &times
+                        form.modal__content(action="/action_page.php")
+                            .modal__container.flex-column
+                                h1 Регистрация
+                                hr
+                                label(for="email") Email
+                                input(type="text" placeholder="Введите Email" name="email" required)
+
+                                label(for="psw") Пароль
+                                input(type="password" placeholder="Введите пароль" name="psw" required)
+
+                                label(for="psw-repeat") Повторите пароль
+                                input(type="password" placeholder="Повторите пароль" name="psw-repeat" required)
+
+                                .flex-space
+                                    button.button.button_view-info.modal__button(type="button" onclick="document.getElementById('id01').style.display='none'") Отменить
+                                    button.button.button_view-action.modal__button(type="submit") Зарегестрировать
+
                     a.headertop__list(href="#") Вход
                     a.headertop__list(href="#") Корзина
                     a.headertop__list.headertop__list-view_orange(href="#") 0
     
     .headermiddle
-
         .wrap.flex-space
-
             .logo.headermiddle__logo
-                a(href="#")
+                a(href="/index.html")
                     img(src="images/logo.svg", alt="Online print")
                 span Полиграфический онлайн сервис
 
@@ -153,13 +171,12 @@ header.header
                     .dropdown__link(href="") Срочная печать
 
             .headerbottom__right.flex-end
-                a(href="#").dropdown__button.headerbottom__link ОНЛАЙН КАЛЬКУЛЯТОР
-                a(href="#").dropdown__button.headerbottom__link ПРОВЕРКА МАКЕТА
+                a(href="/calculator.html").dropdown__button.headerbottom__link ОНЛАЙН КАЛЬКУЛЯТОР
+                a(href="/download.html").dropdown__button.headerbottom__link ПРОВЕРКА МАКЕТА
                 .dropdown
                     .dropdown__button ИНФОРМАЦИЯ
                     .dropdown__content
-                        a.dropdown__link(href="") О нас
-                        a.dropdown__link(href="") Технические требования
-                        a.dropdown__link(href="") Доставка
-                        a.dropdown__link(href="") Оплата
-                        a.dropdown__link(href="") Контакты
+                        a.dropdown__link(href="/about.html") О нас
+                        a.dropdown__link(href="/demans.html") Технические требования
+                        a.dropdown__link(href="/delevery.html") Доставка
+                        a.dropdown__link(href="/contacts.html") Контакты

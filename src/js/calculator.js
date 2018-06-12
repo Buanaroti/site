@@ -18,7 +18,6 @@ function calculator() {
     big = document.getElementById('big').value;// получаю число из select по id (Биговка)
     falz = document.getElementById('falz').value;// получаю число из select по id (Фальцовка)
 
-    
     if (n1 > 0) {
         result = Math.round(n1 * format * papper * color * laminazia * big * falz + kruglenie);
     } else {

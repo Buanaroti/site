@@ -1,0 +1,87 @@
+mixin scripts(scripts)
+	each src in scripts
+		- src = 'js/' + src;
+		script(src=src)
+			
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=1180")
+		title Типография онлайн "Online print"
+		//css
+		link(rel="stylesheet" href="css/style.min.css")
+		//fonts
+		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+		// Favicon
+		link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
+		// animate css
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		script(src="js/wow.min.js")
+		script.
+			new WOW().init();
+
+	body.body
+		//header
+		include blocks/header.pug
+		//content
+		.content
+			//slider
+			.main-slider.js-main-slider
+					.main-slider__i(style="background-image:url(images/slider/slide1.jpg);")
+						.wrap.main-slider__i-wrap
+							.main-slider__i-text
+								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
+								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
+								a(href="#").button.button_view-white Подробнее
+					.main-slider__i(style="background-image:url(images/slider/slide2.jpg);")
+						.wrap.main-slider__i-wrap
+							.main-slider__i-text
+								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
+								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
+								a(href="#").button.button_view-white Подробнее
+					.main-slider__i(style="background-image:url(images/slider/slide3.jpg);")
+						.wrap.main-slider__i-wrap
+							.main-slider__i-text3
+								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
+								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
+								a(href="#").button.button_view-action Подробнее
+			
+			//about
+			.gap-vertical.bgc-grey
+				.wrap
+					h1 Кто мы?
+					p Наша онлайн-типография дает возможность клиенту самостоятельно создать, разместить и оплатить заказ прямо на сайте. Обработка заказа и печать происходит в максимально короткие сроки, а доставка осуществляется любым удобным способом. Печать производится на собственном современном оборудовании, а это означает сравнительно низкую стоимость за счет отсутствия посредников, но при этом вся наша продукция высокого класса. Главные преимущества типографии ONLINEPRINT — это отсутствие очередей, возможность оформить заказ там, где вам удобно это сделать, в любое время суток.	
+			
+			//advantages
+			.advantages.flex-space.wrap
+				.advantages__item.fadeInRight.animated.wow
+					.advantages__img
+						img(src="images/medal.png", alt="medal")
+					.advantages__title
+						h3 ВЫСОЧАЙШЕЕ КАЧЕСТВО
+					.advantages__text
+						p Наше оборудование позволяет нам предоставить вам высочайшее качесвто печати при низких ценах
+				.advantages__item.fadeInRight.animated.wow
+					.advantages__img
+						img(src="images/speed.png", alt="speed")
+					.advantages__title
+						h3 СКОРОСТЬ ПЕЧАТИ
+					.advantages__text
+						p Наш штат менеджеров более 30 человек, поэтому мы вовремя обработаем ваш заказ
+				.advantages__item.fadeInRight.animated.wow
+					.advantages__img
+						img(src="images/money.png", alt="money")
+					.advantages__title
+						h3 СКИДКИ ДЛЯ ПАРТНЁРОВ
+					.advantages__text
+						p Больше тиражей - больше партнерская скидка! Система скидок в личном кабинете партнера.
+								
+	
+		// footer
+		.body__footer
+			include blocks/footer.pug
+
+		//scripts
+		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'calculator.js'])
+		

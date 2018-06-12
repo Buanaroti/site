@@ -1,0 +1,112 @@
+mixin scripts(scripts)
+	each src in scripts
+		- src = 'js/' + src;
+		script(src=src)
+			
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=1180")
+		title Типография онлайн "Online print"
+		//css
+		link(rel="stylesheet" href="css/style.min.css")
+		//fonts
+		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+		// Favicon
+		link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
+		// animate css
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		script(src="js/wow.min.js")
+		script.
+			new WOW().init();
+
+	body.body
+		//header
+		include blocks/header.pug
+		//content
+		.content
+			//slider
+			.main-slider.js-main-slider
+					.main-slider__i(style="background-image:url(images/slider/slide1.jpg);")
+						.wrap.main-slider__i-wrap
+							.main-slider__i-text
+								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
+								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
+								a(href="#").button.button_view-white Подробнее
+					.main-slider__i(style="background-image:url(images/slider/slide2.jpg);")
+						.wrap.main-slider__i-wrap
+							.main-slider__i-text
+								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
+								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
+								a(href="#").button.button_view-white Подробнее
+					.main-slider__i(style="background-image:url(images/slider/slide3.jpg);")
+						.wrap.main-slider__i-wrap
+							.main-slider__i-text3
+								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
+								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
+								a(href="#").button.button_view-action Подробнее
+			// calculator
+			.body__calulator
+				.calculator
+					.wrap.gap-vertical
+						h1 Печать брошюр в Нижнем Новгороде
+						.calculator__container.bounceInUp.animated.wow
+							.calculator__form.flex-wrap.flex-inline.flex-evenly
+
+								.calculator__left.flex-column
+									label.calculator__label(for="n1") Тираж
+									input.calculator__input(type="text" name="Tiraz" id="n1")
+									label.calculator__label(for="format") Формат изделия
+									select.calculator__select.select(name="format" id="format")
+										option(value="1" selected) (90*50мм)
+										option(value="0.90") (85*55мм)
+									label.calculator__label(for="papper") Бумага
+									select.calculator__select.select(name="papper" id="papper")
+										option(value="1" selected) Картон 310гр. (как у визиток)
+										option(value="1.78") Самоклейка 80г.
+									label.calculator__label(for="color") Цветность
+									select.calculator__select(name="color" id="color")
+										option(value="1" selected) 1+0 (черно-белая, односторонняя)
+										option(value="1.5") 1+1 (черно-белая, двусторонняя)
+										option(value="2.5") 4+0 (цветная, односторонняя)
+										option(value="3") 4+4 (цветная, двусторонняя)
+									label.calculator__label(for="laminazia") Ламинация
+									select.calculator__select(name="laminazia" id="laminazia")
+										option(value="1" selected) Нет
+										option(value="1.5") Глянцевая 30мк. (односторонняя)
+										option(value="1.7") Глянцевая 30мк. (двухсторонняя)
+										option(value="1.5") Матовая 30мк. (односторонняя)
+										option(value="1.7") Матовая 30мк. (двухсторонняя)
+										option(value="1.7") Софт-тач 30мк. (матовая, односторонняя, с эффектом резины)
+										option(value="1.9") Матовая 30мк. (матовая, двухсторонняя, с эффектом резины)
+
+								.calculator__right.flex-column
+									label.calculator__label(for="Kruglenie") Кругление углов
+									select.calculator__select(name="Kruglenie" id="Kruglenie")
+										option(value="0" selected) Нет
+										option(value="2") 1 угол
+										option(value="4") 2 угола
+										option(value="6") 3 угола
+										option(value="8") 4 угола
+									.calculator__price
+										.calculator__span
+											| Стоимость заказа 
+											span#out.calculator__rub 0
+											|  &#8381
+										.flex-space
+											button.button.button_view-info.calculator__btn(onclick ='calculator()') Расчитать
+											button.button.button_view-action.calculator__btn Оформить
+			// text
+			.bgc-grey
+				.wrap.gap-vertical
+					h3 Продающий текст
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab aspernatur perferendis, eius repellendus dolores a veritatis! Non esse odio accusamus libero voluptatibus sint consequuntur optio, velit, eaque voluptates dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab aspernatur perferendis, eius repellendus dolores a veritatis! Non esse odio accusamus libero voluptatibus sint consequuntur optio, velit, eaque voluptates dignissimos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ab aspernatur perferendis, eius repellendus dolores a veritatis! Non esse odio accusamus libero voluptatibus sint consequuntur optio, velit, eaque voluptates dignissimos?
+		
+		// footer
+		.body__footer
+			include blocks/footer.pug
+
+		//scripts
+		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'calculator.js'])
+		

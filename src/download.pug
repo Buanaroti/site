@@ -1,0 +1,52 @@
+mixin scripts(scripts)
+	each src in scripts
+		- src = 'js/' + src;
+		script(src=src)
+			
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=1180")
+		title Типография онлайн "Online print"
+		//css
+		link(rel="stylesheet" href="css/style.min.css")
+		//fonts
+		link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+		// Favicon
+		link(href="images/favicon.ico" type="image/x-icon" rel="shortcut icon")
+		// animate css
+		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css")
+		script(src="js/wow.min.js")
+		script.
+			new WOW().init();
+
+	body.body
+		//header
+		include blocks/header.pug
+		//content
+		.content
+			.download.wrap.flex-space.flex-wrap.gap-vertical
+				sidebar.download__sidebar.column-2
+					span.download__span Требования к макету:
+					p Разрешение: 300 dpi
+					p CMYK
+					p Текст и объекты в кривых, без абрисов
+					p Все эффекты переведены в растр
+					p Текст находится на расстоянии 5 мм от каждого края макета
+					p Формат файлов: ai, eps, cdr, jpg, jpeg, png, tif, pdf, psd, rar, tiff, zip
+				.download__text.column-4
+					p Загрузите файлы содержащие макеты. Макеты будут проверены нашим отделом препресса и в случае обнаружения ошибок мы свяжемся с Вами.
+					p Просьба заранее ознакомится с техническими требованиями. В случае несоответствия макета техническим требованиям мы предложим Вам скорректирвовать макет за дополнительную плату.
+					.download__box
+						form(enctype="multipart/form-data" method="post")
+							input(type="file" name="f" multiple accept="image/*")
+							input.button.button_view-info(type="submit" value="Отправить")
+
+		// footer
+		.body__footer
+			include blocks/footer.pug
+
+		//scripts
+		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'calculator.js'])
+		

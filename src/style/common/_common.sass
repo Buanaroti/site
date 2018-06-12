@@ -3,11 +3,19 @@
 *::after
 	box-sizing: border-box
 
+.clearfix::after
+    content: ""
+    clear: both
+    display: table
+
 html
 	-webkit-text-size-adjust: 100%
 	-ms-text-size-adjust: 100%
 	-ms-overflow-style: scrollbar
 	-webkit-tap-highlight-color: transparent
+
+body, html
+  height: 100%
 
 h1, h2, h3, h4, h5, h6
   margin-top: 0
@@ -46,6 +54,10 @@ textarea
 .column-6
 	flex: 0 0 100%
 	max-width: 100%
+
+.column-4
+	flex: 0 0 66.666666%
+	max-width: 66.666666%
 
 .column-3
 	flex: 0 0 50%
@@ -95,4 +107,8 @@ textarea
 // background color
 .bgc-grey
   background-color: #f8fafb
+
+.gap-vertical
+  padding-top: 50px
+  padding-bottom: 50px
   
