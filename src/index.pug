@@ -21,7 +21,7 @@ html(lang="ru")
 		script.
 			new WOW().init();
 
-	body
+	body.body
 		//header
 		include blocks/header.pug
 		//content
@@ -73,67 +73,145 @@ html(lang="ru")
 						
 		//categories
 		.body__categories.bgc-grey
-			.categories__title
-				h1 Категории
+			h1.title.wrap Категории
 			.categories.flex-space.wrap.flex-wrap
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/card.png", alt="card")
+				.categories__item.border-shdw.fadeInLeft.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/card.png", alt="card")
 					.categories__text
 						Span.categories__span Визитки
 						p.categories__p.flex-vertical Создадим визитку бесплатно при заказе от 2000 штук!
 						a(href="#").button.button_view-action.categories__btn Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/listovki.png", alt="listovki")
+				.categories__item.border-shdw.fadeInLeft.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/listovki.png", alt="listovki")
 					.categories__text
 						Span.categories__span Листовки
 						p.categories__p.flex-vertical Создадим листовку бесплатно при заказе от 5000 штук!
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/bukleti.png", alt="bukleti")
+				.categories__item.border-shdw.fadeInLeft.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/bukleti.png", alt="bukleti")
 					.categories__text
 						Span.categories__span Буклеты
 						p.categories__p.flex-vertical Наша типография печатает все виды булетов.
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/plakat.png", alt="plakat")
+				.categories__item.border-shdw.fadeInRight.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/plakat.png", alt="plakat")
 					.categories__text
 						Span.categories__span Плакаты
 						p.categories__p.flex-vertical Мы печатаем плакаты в Нижнем Новгороде по самой низкой цене.
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/broshura.png", alt="broshura")
+				.categories__item.border-shdw.fadeInRight.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/broshura.png", alt="broshura")
 					.categories__text
 						Span.categories__span Брошюры
 						p.categories__p.flex-vertical Печать брошюр в Нижнем Новгороде хорошего качества
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/books.png", alt="books")
+				.categories__item.border-shdw.fadeInRight.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/books.png", alt="books")
 					.categories__text
 						Span.categories__span Журналы
 						p.categories__p.flex-vertical Печать журналов в Нижнем Новгроде по низкой цене и с хорошим качеством.
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/kalendar.png", alt="kalendar")
+				.categories__item.border-shdw.fadeInLeft.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/kalendar.png", alt="kalendar")
 					.categories__text
 						Span.categories__span Календари
 						p.categories__p.flex-vertical Закажите печать квартальных календарей в Нижнем Новгороде у нас.
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/pechat.png", alt="pechat")
+				.categories__item.border-shdw.fadeInLeft.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/pechat.png", alt="pechat")
 					.categories__text
 						Span.categories__span Изготовление печатей
 						p.categories__p.flex-vertical Изготовление печатей в Нижнем Новгороде по низкой цене.
 						a(href="#").button.button_view-action Подробнее
-				.categories__item.border-shdw
-					img.categories__img.border-shdw.fadeInLeft.animated.wow(src="/images/categories/other.png", alt="other")
+				.categories__item.border-shdw.fadeInLeft.animated.wow
+					img.categories__img.border-shdw(src="/images/categories/other.png", alt="other")
 					.categories__text
 						Span.categories__span Другие виды продукции и услуги
 						p.categories__p.flex-vertical Мы всегда рады нашим клиентам и постоянно расширяем спектр производимых товаров
 						a(href="#").button.button_view-action Подробнее
 
+		// calculator
+		.body__calculator
+			.calculator
+				.wrap
+					h1.title Калькулятор стоимости
+					.calculator__container
+						.calculator__form.flex-wrap.flex-inline.flex-evenly
+
+							.calculator__left.flex-column
+								label.calculator__label(for="n1") Тираж
+								input.calculator__input(type="text" name="Tiraz" id="n1")
+								label.calculator__label(for="format") Формат изделия
+								select.calculator__select.select(name="format" id="format")
+									option(value="29.1" selected) A1 (594*841мм)
+									option(value="22") A2 (420*594мм)
+									option(value="11") A3 (297*420мм)
+									option(value="5.1") A4 (210*297мм)
+									option(value="3.1") A5 (148*210мм)
+									option(value="2.1") A6 (105*158мм)
+									option(value="2.1") Флаер (99*210мм)
+								label.calculator__label(for="papper") Бумага
+								select.calculator__select.select(name="papper" id="papper")
+									option(value="1" selected) Офсетная 80г. (тонкая, как в принтере)
+									option(value="1.27") Мелованная 130г. (тонкая. как у листовок)
+									option(value="1.27") Мелованная 150г. (чуть толще)
+									option(value="1.45") Мелованная 170г. (поплотнее)
+									option(value="1.54") Мелованная 200г. (плотная)
+									option(value="1.72") Мелованная 250г. (еще плотнее)
+									option(value="1.95") Мелованная 300г. (самая плотная)
+									option(value="1.33") Картон 310гр. (как у визиток)
+									option(value="1.78") Самоклейка 80г.
+								label.calculator__label(for="color") Цветность
+								select.calculator__select(name="color" id="color")
+									option(value="1" selected) 1+0 (черно-белая, односторонняя)
+									option(value="1.5") 1+1 (черно-белая, двусторонняя)
+									option(value="2.5") 4+0 (цветная, односторонняя)
+									option(value="3") 4+4 (цветная, двусторонняя)
+								label.calculator__label(for="laminazia") Ламинация
+								select.calculator__select(name="laminazia" id="laminazia")
+									option(value="1" selected) Нет
+									option(value="1.5") Глянцевая 30мк. (односторонняя)
+									option(value="1.7") Глянцевая 30мк. (двухсторонняя)
+									option(value="1.5") Матовая 30мк. (односторонняя)
+									option(value="1.7") Матовая 30мк. (двухсторонняя)
+									option(value="1.7") Софт-тач 30мк. (матовая, односторонняя, с эффектом резины)
+									option(value="1.9") Матовая 30мк. (матовая, двухсторонняя, с эффектом резины)
+
+							.calculator__right.flex-column
+								label.calculator__label(for="Kruglenie") Кругление углов
+								select.calculator__select(name="Kruglenie" id="Kruglenie")
+									option(value="0" selected) Нет
+									option(value="2") 1 угол
+									option(value="4") 2 угола
+									option(value="6") 3 угола
+									option(value="8") 4 угола
+								label.calculator__label(for="big") Биговка
+								select.calculator__select(name="big" id="big")
+									option(value="1" selected) Нет
+									option(value="1.25") 1 биг
+									option(value="1.5") 2 бига
+									option(value="1.75") 3 бига
+									option(value="2") 4 бига
+								label.calculator__label(for="falz") Фальц
+								select.calculator__select(name="falz" id="falz")
+									option(value="1" selected) Нет
+									option(value="1.25") 1 фальц
+									option(value="1.5") 2 фальца
+									option(value="1.75") 3 фальца
+									option(value="2") 4 фальца
+								.calculator__price
+									.calculator__span
+										| Стоимость заказа 
+										span#out.calculator__rub 0
+										|  &#8381
+									.flex-space
+										button.button.button_view-info.calculator__btn(onclick ='calculator()') Расчитать
+										button.button.button_view-action.calculator__btn Оформить
+
 		// footer
-		include blocks/footer.pug
+		.body__footer
+			include blocks/footer.pug
 
 		//scripts
-		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js'])
+		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'calculator.js'])
 		
