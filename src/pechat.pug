@@ -46,33 +46,67 @@ html(lang="ru")
 								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
 								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
 								a(href="#").button.button_view-action Подробнее
-			// calculator
-			.body__calulator
+			//advantages
+			.advantages.flex-space.wrap
+				.advantages__item.fadeInRight.animated.wow
+					.advantages__img
+						img(src="images/medal.png", alt="medal")
+					.advantages__title
+						h3 ВЫСОЧАЙШЕЕ КАЧЕСТВО
+					.advantages__text
+						p Наше оборудование позволяет нам предоставить вам высочайшее качесвто печати при низких ценах
+				.advantages__item.fadeInRight.animated.wow
+					.advantages__img
+						img(src="images/speed.png", alt="speed")
+					.advantages__title
+						h3 СКОРОСТЬ ПЕЧАТИ
+					.advantages__text
+						p Наш штат менеджеров более 30 человек, поэтому мы вовремя обработаем ваш заказ
+				.advantages__item.fadeInRight.animated.wow
+					.advantages__img
+						img(src="images/money.png", alt="money")
+					.advantages__title
+						h3 СКИДКИ ДЛЯ ПАРТНЁРОВ
+					.advantages__text
+						p Больше тиражей - больше партнерская скидка! Система скидок в личном кабинете партнера.
+			//calculator
+			.body__calculator
 				.calculator
-					.wrap.gap-vertical
-						h1 Изготовление печатей в Нижнем Новгороде
+					.wrap
+						h1.title-white Изготовление печатей в Нижнем Новгороде
 						.calculator__container.bounceInUp.animated.wow
 							.calculator__form.flex-wrap.flex-inline.flex-evenly
-
 								.calculator__left.flex-column
 									label.calculator__label(for="n1") Тираж
-									input.calculator__input(type="text" name="Tiraz" id="n1")
+									input.input(type="text" name="Tiraz" id="n1")
 									label.calculator__label(for="format") Формат изделия
-									select.calculator__select.select(name="format" id="format")
-										option(value="1" selected) (90*50мм)
-										option(value="0.90") (85*55мм)
+									select.select(name="format" id="format")
+										option(value="29.1" selected) A1 (594*841мм)
+										option(value="22") A2 (420*594мм)
+										option(value="11") A3 (297*420мм)
+										option(value="5.1") A4 (210*297мм)
+										option(value="3.1") A5 (148*210мм)
+										option(value="2.1") A6 (105*158мм)
+										option(value="2.1") Флаер (99*210мм)
 									label.calculator__label(for="papper") Бумага
-									select.calculator__select.select(name="papper" id="papper")
-										option(value="1" selected) Картон 310гр. (как у визиток)
+									select.select(name="papper" id="papper")
+										option(value="1" selected) Офсетная 80г. (тонкая, как в принтере)
+										option(value="1.27") Мелованная 130г. (тонкая. как у листовок)
+										option(value="1.27") Мелованная 150г. (чуть толще)
+										option(value="1.45") Мелованная 170г. (поплотнее)
+										option(value="1.54") Мелованная 200г. (плотная)
+										option(value="1.72") Мелованная 250г. (еще плотнее)
+										option(value="1.95") Мелованная 300г. (самая плотная)
+										option(value="1.33") Картон 310гр. (как у визиток)
 										option(value="1.78") Самоклейка 80г.
 									label.calculator__label(for="color") Цветность
-									select.calculator__select(name="color" id="color")
+									select.select(name="color" id="color")
 										option(value="1" selected) 1+0 (черно-белая, односторонняя)
 										option(value="1.5") 1+1 (черно-белая, двусторонняя)
 										option(value="2.5") 4+0 (цветная, односторонняя)
 										option(value="3") 4+4 (цветная, двусторонняя)
 									label.calculator__label(for="laminazia") Ламинация
-									select.calculator__select(name="laminazia" id="laminazia")
+									select.select(name="laminazia" id="laminazia")
 										option(value="1" selected) Нет
 										option(value="1.5") Глянцевая 30мк. (односторонняя)
 										option(value="1.7") Глянцевая 30мк. (двухсторонняя)
@@ -80,22 +114,35 @@ html(lang="ru")
 										option(value="1.7") Матовая 30мк. (двухсторонняя)
 										option(value="1.7") Софт-тач 30мк. (матовая, односторонняя, с эффектом резины)
 										option(value="1.9") Матовая 30мк. (матовая, двухсторонняя, с эффектом резины)
-
 								.calculator__right.flex-column
 									label.calculator__label(for="Kruglenie") Кругление углов
-									select.calculator__select(name="Kruglenie" id="Kruglenie")
+									select.select(name="Kruglenie" id="Kruglenie")
 										option(value="0" selected) Нет
 										option(value="2") 1 угол
 										option(value="4") 2 угола
 										option(value="6") 3 угола
 										option(value="8") 4 угола
+									label.calculator__label(for="big") Биговка
+									select.select(name="big" id="big")
+										option(value="1" selected) Нет
+										option(value="1.25") 1 биг
+										option(value="1.5") 2 бига
+										option(value="1.75") 3 бига
+										option(value="2") 4 бига
+									label.calculator__label(for="falz") Фальц
+									select.select(name="falz" id="falz")
+										option(value="1" selected) Нет
+										option(value="1.25") 1 фальц
+										option(value="1.5") 2 фальца
+										option(value="1.75") 3 фальца
+										option(value="2") 4 фальца
 									.calculator__price
 										.calculator__span
 											| Стоимость заказа 
 											span#out.calculator__rub 0
 											|  &#8381
 										.flex-space
-											button.button.button_view-info.calculator__btn(onclick ='calculator()') Расчитать
+											.button.calculator__btn.button_view-white(onclick ='calculator()') Расчитать
 											button.button.button_view-action.calculator__btn Оформить
 			// text
 			.bgc-grey

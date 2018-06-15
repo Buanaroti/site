@@ -1,7 +1,5 @@
 header.header
-
     .headertop
-
         .wrap
             .headertop__social.flex-space
                 .social
@@ -13,29 +11,39 @@ header.header
                         img.social__pic(src="/images/facebook.png", alt="facebook")
                     a.social__link(href="#")
                         img.social__pic(src="/images/whatsapp.png", alt="whatsapp")
-
                 .headertop__enter
                     a.headertop__list.cursor(onclick="document.getElementById('id01').style.display='block'" style="width:auto;") Регистрация
-                    //modal signup
+                    // modal signup
                     .modal#id01
                         span.modal__close(onclick="document.getElementById('id01').style.display='none'" title="Close Modal") &times
                         form.form.modal__content(action="/action_page.php")
                             .form__header.headertop__form-title Регистрация
                             .form__footer
-                                label.form__label(for="email") Email
-                                input.form__input(type="text" name="email" required)
-                                label.form__label(for="psw") Пароль
-                                input.form__input(type="password" name="psw" required)
-                                label.form__label(for="psw-repeat") Повторите пароль
-                                input.form__input(type="password" name="psw-repeat" required)
-                                .flex-space
+                                label.label(for="email") Email
+                                input.input(type="text" name="email" required)
+                                label.label(for="psw") Пароль
+                                input.input(type="password" name="psw" required)
+                                label.label(for="psw-repeat") Повторите пароль
+                                input.input(type="password" name="psw-repeat" required)
+                                .flex-space.flex-wrap
                                     button.button.button_view-reverse(type="button" onclick="document.getElementById('id01').style.display='none'") Отменить
                                     button.button.button_view-action(type="submit") Зарегестрировать
-
-                    a.headertop__list(href="#") Вход
-                    a.headertop__list(href="#") Корзина
+                    a.headertop__list.cursor(onclick="document.getElementById('id02').style.display='block'" style="width:auto;") Вход
+                    // modal enter
+                    .modal#id02
+                        span.modal__close(onclick="document.getElementById('id02').style.display='none'" title="Close Modal") &times
+                        form.form.modal__content(action="/action_enter.php")
+                            .form__header.headertop__form-title Вход
+                            .form__footer
+                                label.label(for="email") Введите ваш логин
+                                input.input(type="text" name="email" required)
+                                label.label(for="psw") Введите ваш пароль
+                                input.input(type="password" name="psw" required)
+                                .flex-space.flex-wrap
+                                    button.button.button_view-action(type="submit") Войти
+                    a.headertop__list(href="/bascet.html") Корзина
                     a.headertop__list.headertop__list-view_orange(href="#") 0
-    
+
     .headermiddle
         .wrap.flex-space
             .logo.headermiddle__logo
@@ -48,20 +56,37 @@ header.header
                 span.headermiddle__text Выберите свой город для<br>отображения актуальной стоимости
 
             .headermiddle__button
-                a.button.button_view-action(href="#") Быстрый заказ
-                
+                a.button.button_view-action(href="/download.html") Быстрый заказ
             .flex-column
                 span.headermiddle__tel +7 (831) 123-45-67
-                a.headermiddle__feedback.link_view-orange(href="#") заказать обратный звонок
+                a.cursor.headermiddle__feedback.link_view-orange(onclick="document.getElementById('id03').style.display='block'" style="width:auto;") заказать обратный звонок
+                // feedback_modal
+                .modal#id03
+                    span.modal__close(onclick="document.getElementById('id03').style.display='none'" title="Close Modal") &times
+                    .feedback.flex-space.wrap.gap-vertical.flex-center
+                        form(action="feedback.php").form.column-4
+                            .form__header.feedback__header Связаться с нами
+                            .form__footer
+                                .flex-space
+                                    .flex-column.column-3
+                                        label.label(for="name") Ваше имя
+                                        input.input.feedback__width(type="text" id="name")
+                                    .flex-column.column-3
+                                        label.label(for="email") Ваш email
+                                        input.input(type="text" id="email")
+                                label.label(for="subject") Тема обращения
+                                input.input(type="text" id="subject")
+                                label.label(for="text") Текст
+                                textarea.input(type="text" id="text")
+                                button.button.button_view-action(type="submit") Отправить
                 span.headermiddle__time время работы: круглосуточно
-
     .headerbottom
         .wrap.flex-space
             .dropdown.headerbottom__dropdown
                 .dropdown__button.cursor ПРОДУКЦИЯ И УСЛУГИ
                 .dropdown__content
                     span.dropdown__popular.flex-end Популярное
-                    //- Визитки
+                    // Визитки
                     .dropdown__link.cursor Визитки
                         .dropdown-subnav
                             h3.dropdown-subnav__title Печать визиток
@@ -69,7 +94,7 @@ header.header
                                 .dropdown-subnav__col-left
                                     form(action="calc.php", method="post").dropdown-subnav__form.flex-column
                                         span.dropdown-subnav__span-size Размер
-                                        select(name="size") 
+                                        select.select(name="size") 
                                             option(value="90x50") 90x50 мм
                                             option(value="90x50") 85x55 мм
                                         span.dropdown-subnav__span-cmyk Цветность
@@ -154,7 +179,7 @@ header.header
                                             td
                                                 a(href="#").button.button_view-action.dropdown-subnav__view-button
                                                     img(src="/images/shopping.png", alt="shopping")
-                    //- Листовки
+                    // Листовки
                     .dropdown__link.cursor(href="") Листовки
                         .dropdown-subnav
                             h3.dropdown-subnav__title Печать листовок
@@ -162,7 +187,7 @@ header.header
                                 .dropdown-subnav__col-left
                                     form(action="calc.php", method="post").dropdown-subnav__form.flex-column
                                         span.dropdown-subnav__span-size Размер
-                                        select(name="size") 
+                                        select.select(name="size") 
                                             option(value="90x50") 90x50 мм
                                             option(value="90x50") 85x55 мм
                                         span.dropdown-subnav__span-cmyk Цветность
@@ -247,7 +272,7 @@ header.header
                                             td
                                                 a(href="#").button.button_view-action.dropdown-subnav__view-button
                                                     img(src="/images/shopping.png", alt="shopping")
-                    //- Буклеты
+                    // Буклеты
                     .dropdown__link.cursor(href="") Плакаты
                         .dropdown-subnav
                             h3.dropdown-subnav__title Печать плакатов
@@ -255,7 +280,7 @@ header.header
                                 .dropdown-subnav__col-left
                                     form(action="calc.php", method="post").dropdown-subnav__form.flex-column
                                         span.dropdown-subnav__span-size Размер
-                                        select(name="size") 
+                                        select.select(name="size") 
                                             option(value="90x50") 90x50 мм
                                             option(value="90x50") 85x55 мм
                                         span.dropdown-subnav__span-cmyk Цветность
@@ -340,7 +365,7 @@ header.header
                                             td
                                                 a(href="#").button.button_view-action.dropdown-subnav__view-button
                                                     img(src="/images/shopping.png", alt="shopping")
-                    //- Брошюры
+                    // Брошюры
                     .dropdown__link.cursor(href="") Буклеты
                         .dropdown-subnav
                             h3.dropdown-subnav__title Печать буклетов
@@ -348,7 +373,7 @@ header.header
                                 .dropdown-subnav__col-left
                                     form(action="calc.php", method="post").dropdown-subnav__form.flex-column
                                         span.dropdown-subnav__span-size Размер
-                                        select(name="size") 
+                                        select.select(name="size") 
                                             option(value="90x50") 90x50 мм
                                             option(value="90x50") 85x55 мм
                                         span.dropdown-subnav__span-cmyk Цветность
@@ -433,7 +458,7 @@ header.header
                                             td
                                                 a(href="#").button.button_view-action.dropdown-subnav__view-button
                                                     img(src="/images/shopping.png", alt="shopping")
-                    //-  Брошюры                               
+                    //  Брошюры                               
                     .dropdown__link.cursor(href="") Брошюры
                         .dropdown-subnav
                             h3.dropdown-subnav__title Печать брошюр
@@ -441,7 +466,7 @@ header.header
                                 .dropdown-subnav__col-left
                                     form(action="calc.php", method="post").dropdown-subnav__form.flex-column
                                         span.dropdown-subnav__span-size Размер
-                                        select(name="size") 
+                                        select.select(name="size") 
                                             option(value="90x50") 90x50 мм
                                             option(value="90x50") 85x55 мм
                                         span.dropdown-subnav__span-cmyk Цветность

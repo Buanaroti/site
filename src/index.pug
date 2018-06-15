@@ -46,7 +46,6 @@ html(lang="ru")
 								span НАДЕЖНАЯ ТИПОГРАФИЯ<br>СО СВОИМ ПРОИЗВОДСТВОМ
 								p Наша цель проста - предоставить нашим клиентам высокий уровень качества и сервиса.<br>Мы верим, что отличные идеи начинаются с отличного дизайна и печати.
 								a(href="#").button.button_view-action Подробнее
-				
 			//advantages
 			.advantages.flex-space.wrap
 				.advantages__item.fadeInRight.animated.wow
@@ -76,55 +75,55 @@ html(lang="ru")
 				h1.title.wrap Категории
 
 				.flex-space.wrap.flex-wrap
-					.card.fadeInLeft.animated.wow
+					.card.fadeInLeft.animated.wow.body__marbot
 						img.card__img(src="/images/categories/card.png", alt="card")
 						.card__text
 							Span.card__span Визитки
 							p.card__p.flex-vertical Создадим визитку бесплатно при заказе от 2000 штук!
 							a(href="/card.html").button.button_view-info Подробнее
-					.card.fadeInLeft.animated.wow
+					.card.fadeInLeft.animated.wow.body__marbot
 						img.card__img(src="/images/categories/listovki.png", alt="listovki")
 						.card__text
 							Span.card__span Листовки
 							p.card__p.flex-vertical Создадим листовку бесплатно при заказе от 5000 штук!
 							a(href="/listovki.html").button.button_view-info Подробнее
-					.card.fadeInLeft.animated.wow
+					.card.fadeInLeft.animated.wow.body__marbot
 						img.card__img(src="/images/categories/bukleti.png", alt="bukleti")
 						.card__text
 							Span.card__span Буклеты
 							p.card__p.flex-vertical Наша типография печатает все виды булетов.
 							a(href="/bukleti.html").button.button_view-info Подробнее
-					.card.fadeInRight.animated.wow
+					.card.fadeInRight.animated.wow.body__marbot
 						img.card__img(src="/images/categories/plakat.png", alt="plakat")
 						.card__text
 							Span.card__span Плакаты
 							p.card__p.flex-vertical Мы печатаем плакаты в Нижнем Новгороде по самой низкой цене.
 							a(href="/plakat.html").button.button_view-info Подробнее
-					.card.fadeInRight.animated.wow
+					.card.fadeInRight.animated.wow.body__marbot
 						img.card__img(src="/images/categories/broshura.png", alt="broshura")
 						.card__text
 							Span.card__span Брошюры
 							p.card__p.flex-vertical Печать брошюр в Нижнем Новгороде хорошего качества
 							a(href="/broshura.html").button.button_view-info Подробнее
-					.card.fadeInRight.animated.wow
+					.card.fadeInRight.animated.wow.body__marbot
 						img.card__img(src="/images/categories/books.png", alt="books")
 						.card__text
 							Span.card__span Журналы
 							p.card__p.flex-vertical Печать журналов в Нижнем Новгроде по низкой цене и с хорошим качеством.
 							a(href="/books.html").button.button_view-info Подробнее
-					.card.fadeInLeft.animated.wow
+					.card.fadeInLeft.animated.wow.body__marbot
 						img.card__img(src="/images/categories/kalendar.png", alt="kalendar")
 						.card__text
 							Span.card__span Календари
 							p.card__p.flex-vertical Закажите печать квартальных календарей в Нижнем Новгороде у нас.
 							a(href="/kalendar.html").button.button_view-info Подробнее
-					.card.fadeInLeft.animated.wow
+					.card.fadeInLeft.animated.wow.body__marbot
 						img.card__img(src="/images/categories/pechat.png", alt="pechat")
 						.card__text
 							Span.card__span Изготовление печатей
 							p.card__p.flex-vertical Изготовление печатей в Нижнем Новгороде по низкой цене.
 							a(href="/pechat.html").button.button_view-info Подробнее
-					.card.fadeInLeft.animated.wow
+					.card.fadeInLeft.animated.wow.body__marbot
 						img.card__img(src="/images/categories/other.png", alt="other")
 						.card__text
 							Span.card__span Другие виды продукции и услуги
@@ -136,13 +135,13 @@ html(lang="ru")
 				.calculator
 					.wrap
 						h1.title-white Калькулятор стоимости
-						.calculator__container.bounceInUp.animated.wow
+						.calculator__container.fadeInRight.animated.wow
 							.calculator__form.flex-wrap.flex-inline.flex-evenly
 								.calculator__left.flex-column
 									label.calculator__label(for="n1") Тираж
-									input.calculator__input.input(type="text" name="Tiraz" id="n1")
+									input.input(type="text" name="Tiraz" id="n1")
 									label.calculator__label(for="format") Формат изделия
-									select.calculator__select.select(name="format" id="format")
+									select.select(name="format" id="format")
 										option(value="29.1" selected) A1 (594*841мм)
 										option(value="22") A2 (420*594мм)
 										option(value="11") A3 (297*420мм)
@@ -151,7 +150,7 @@ html(lang="ru")
 										option(value="2.1") A6 (105*158мм)
 										option(value="2.1") Флаер (99*210мм)
 									label.calculator__label(for="papper") Бумага
-									select.calculator__select.select(name="papper" id="papper")
+									select.select(name="papper" id="papper")
 										option(value="1" selected) Офсетная 80г. (тонкая, как в принтере)
 										option(value="1.27") Мелованная 130г. (тонкая. как у листовок)
 										option(value="1.27") Мелованная 150г. (чуть толще)
@@ -162,13 +161,13 @@ html(lang="ru")
 										option(value="1.33") Картон 310гр. (как у визиток)
 										option(value="1.78") Самоклейка 80г.
 									label.calculator__label(for="color") Цветность
-									select.calculator__select(name="color" id="color")
+									select.select(name="color" id="color")
 										option(value="1" selected) 1+0 (черно-белая, односторонняя)
 										option(value="1.5") 1+1 (черно-белая, двусторонняя)
 										option(value="2.5") 4+0 (цветная, односторонняя)
 										option(value="3") 4+4 (цветная, двусторонняя)
 									label.calculator__label(for="laminazia") Ламинация
-									select.calculator__select(name="laminazia" id="laminazia")
+									select.select(name="laminazia" id="laminazia")
 										option(value="1" selected) Нет
 										option(value="1.5") Глянцевая 30мк. (односторонняя)
 										option(value="1.7") Глянцевая 30мк. (двухсторонняя)
@@ -179,21 +178,21 @@ html(lang="ru")
 
 								.calculator__right.flex-column
 									label.calculator__label(for="Kruglenie") Кругление углов
-									select.calculator__select(name="Kruglenie" id="Kruglenie")
+									select.select(name="Kruglenie" id="Kruglenie")
 										option(value="0" selected) Нет
 										option(value="2") 1 угол
 										option(value="4") 2 угола
 										option(value="6") 3 угола
 										option(value="8") 4 угола
 									label.calculator__label(for="big") Биговка
-									select.calculator__select(name="big" id="big")
+									select.select(name="big" id="big")
 										option(value="1" selected) Нет
 										option(value="1.25") 1 биг
 										option(value="1.5") 2 бига
 										option(value="1.75") 3 бига
 										option(value="2") 4 бига
 									label.calculator__label(for="falz") Фальц
-									select.calculator__select(name="falz" id="falz")
+									select.select(name="falz" id="falz")
 										option(value="1" selected) Нет
 										option(value="1.25") 1 фальц
 										option(value="1.5") 2 фальца
@@ -205,25 +204,25 @@ html(lang="ru")
 											span#out.calculator__rub 0
 											|  &#8381
 										.flex-space
-											.button.calculator__btn.button_view-info(onclick ='calculator()') Расчитать
+											.button.calculator__btn.button_view-white(onclick ='calculator()') Расчитать
 											button.button.button_view-action.calculator__btn Оформить
 			// feedback
-			.feedback.flex-space.wrap.gap-vertical
+			.feedback.flex-space.wrap.gap-vertical.flex-center.fadeInLeft.animated.wow
 				.form.column-4
 					.form__header.feedback__header Связаться с нами
 					.form__footer
 						.flex-space
 							.flex-column.column-3
-								label.form__label(for="exampleForm2") Ваше имя
-								input.form__input.feedback__width(type="text" id="exampleForm2")
+								label.label(for="name") Ваше имя
+								input.input.feedback__width(type="text" id="name")
 							.flex-column.column-3
-								label.form__label(for="exampleForm2") Ваш email
-								input.form__input(type="text" id="exampleForm2")
-						label.form__label(for="exampleForm2") Тема обращения
-						input.form__input(type="text" id="exampleForm2")
-						label.form__label(for="exampleForm2") Текст
-						textarea.form__input(type="text" id="exampleForm2")
-				.column-2
+								label.label(for="email") Ваш email
+								input.input(type="text" id="email")
+						label.label(for="subject") Тема обращения
+						input.input(type="text" id="subject")
+						label.label(for="text") Текст
+						textarea.input(type="text" id="text")
+						button.button.button_view-action Отправить
 
 		// footer
 		.body__footer

@@ -30,15 +30,14 @@ html(lang="ru")
 			.body__calculator
 				.calculator
 					.wrap
-						h1.title Калькулятор стоимости
-						.calculator__container
+						h1.title-white Калькулятор стоимости
+						.calculator__container.bounceInUp.animated.wow
 							.calculator__form.flex-wrap.flex-inline.flex-evenly
-
 								.calculator__left.flex-column
 									label.calculator__label(for="n1") Тираж
-									input.calculator__input(type="text" name="Tiraz" id="n1")
+									input.input(type="text" name="Tiraz" id="n1")
 									label.calculator__label(for="format") Формат изделия
-									select.calculator__select.select(name="format" id="format")
+									select.select(name="format" id="format")
 										option(value="29.1" selected) A1 (594*841мм)
 										option(value="22") A2 (420*594мм)
 										option(value="11") A3 (297*420мм)
@@ -47,7 +46,7 @@ html(lang="ru")
 										option(value="2.1") A6 (105*158мм)
 										option(value="2.1") Флаер (99*210мм)
 									label.calculator__label(for="papper") Бумага
-									select.calculator__select.select(name="papper" id="papper")
+									select.select(name="papper" id="papper")
 										option(value="1" selected) Офсетная 80г. (тонкая, как в принтере)
 										option(value="1.27") Мелованная 130г. (тонкая. как у листовок)
 										option(value="1.27") Мелованная 150г. (чуть толще)
@@ -58,13 +57,13 @@ html(lang="ru")
 										option(value="1.33") Картон 310гр. (как у визиток)
 										option(value="1.78") Самоклейка 80г.
 									label.calculator__label(for="color") Цветность
-									select.calculator__select(name="color" id="color")
+									select.select(name="color" id="color")
 										option(value="1" selected) 1+0 (черно-белая, односторонняя)
 										option(value="1.5") 1+1 (черно-белая, двусторонняя)
 										option(value="2.5") 4+0 (цветная, односторонняя)
 										option(value="3") 4+4 (цветная, двусторонняя)
 									label.calculator__label(for="laminazia") Ламинация
-									select.calculator__select(name="laminazia" id="laminazia")
+									select.select(name="laminazia" id="laminazia")
 										option(value="1" selected) Нет
 										option(value="1.5") Глянцевая 30мк. (односторонняя)
 										option(value="1.7") Глянцевая 30мк. (двухсторонняя)
@@ -75,21 +74,21 @@ html(lang="ru")
 
 								.calculator__right.flex-column
 									label.calculator__label(for="Kruglenie") Кругление углов
-									select.calculator__select(name="Kruglenie" id="Kruglenie")
+									select.select(name="Kruglenie" id="Kruglenie")
 										option(value="0" selected) Нет
 										option(value="2") 1 угол
 										option(value="4") 2 угола
 										option(value="6") 3 угола
 										option(value="8") 4 угола
 									label.calculator__label(for="big") Биговка
-									select.calculator__select(name="big" id="big")
+									select.select(name="big" id="big")
 										option(value="1" selected) Нет
 										option(value="1.25") 1 биг
 										option(value="1.5") 2 бига
 										option(value="1.75") 3 бига
 										option(value="2") 4 бига
 									label.calculator__label(for="falz") Фальц
-									select.calculator__select(name="falz" id="falz")
+									select.select(name="falz" id="falz")
 										option(value="1" selected) Нет
 										option(value="1.25") 1 фальц
 										option(value="1.5") 2 фальца
@@ -101,7 +100,7 @@ html(lang="ru")
 											span#out.calculator__rub 0
 											|  &#8381
 										.flex-space
-											button.button.button_view-info.calculator__btn(onclick ='calculator()') Расчитать
+											.button.calculator__btn.button_view-white(onclick ='calculator()') Расчитать
 											button.button.button_view-action.calculator__btn Оформить
 
 			// text
