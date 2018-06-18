@@ -15,32 +15,39 @@ header.header
                     a.headertop__list.cursor(onclick="document.getElementById('id01').style.display='block'" style="width:auto;") Регистрация
                     // modal signup
                     .modal#id01
-                        span.modal__close(onclick="document.getElementById('id01').style.display='none'" title="Close Modal") &times
-                        form.form.modal__content(action="/action_page.php")
-                            .form__header.headertop__form-title Регистрация
-                            .form__footer
-                                label.label(for="email") Email
-                                input.input(type="text" name="email" required)
-                                label.label(for="psw") Пароль
-                                input.input(type="password" name="psw" required)
-                                label.label(for="psw-repeat") Повторите пароль
-                                input.input(type="password" name="psw-repeat" required)
-                                .flex-space.flex-wrap
-                                    button.button.button_view-reverse(type="button" onclick="document.getElementById('id01').style.display='none'") Отменить
-                                    button.button.button_view-action(type="submit") Зарегестрировать
-                    a.headertop__list.cursor(onclick="document.getElementById('id02').style.display='block'" style="width:auto;") Вход
+                        .signup
+                            span.modal__close(onclick="document.getElementById('id01').style.display='none'" title="Close Modal") &times
+                            form.form.modal__content(action="/action_page.php")
+                                .form__header.signup__form-title Регистрация
+                                .form__footer.flex-column
+                                    label.label.form__required(for="signup_email") Email
+                                    span.form__error Необходимо заполнить поле
+                                    input.input(type="text" name="signup_email" required)
+                                    label.label.form__required(for="psw") Пароль
+                                    span.form__error Необходимо заполнить поле
+                                    input.input(type="password" name="psw" required)
+                                    label.label.form__required(for="psw-repeat") Повторите пароль
+                                    span.form__error Необходимо заполнить поле
+                                    input.input(type="password" name="psw-repeat" required)
+                                    .flex-space.flex-wrap
+                                        button.button.button_view-reverse(type="button" onclick="document.getElementById('id01').style.display='none'") Отменить
+                                        button.button.button_view-action.signup__submit(type="submit") Зарегестрировать
                     // modal enter
+                    a.headertop__list.cursor(onclick="document.getElementById('id02').style.display='block'" style="width:auto;") Вход    
                     .modal#id02
-                        span.modal__close(onclick="document.getElementById('id02').style.display='none'" title="Close Modal") &times
-                        form.form.modal__content(action="/action_enter.php")
-                            .form__header.headertop__form-title Вход
-                            .form__footer
-                                label.label(for="email") Введите ваш логин
-                                input.input(type="text" name="email" required)
-                                label.label(for="psw") Введите ваш пароль
-                                input.input(type="password" name="psw" required)
-                                .flex-space.flex-wrap
-                                    button.button.button_view-action(type="submit") Войти
+                        .enter
+                            span.modal__close(onclick="document.getElementById('id02').style.display='none'" title="Close Modal") &times
+                            form.form.modal__content(action="/action_enter.php")
+                                .form__header.enter__form-title Вход
+                                .form__footer.flex-column
+                                    label.label(for="enter_email") Введите ваш логин
+                                    span.form__error Необходимо заполнить поле
+                                    input.input(type="text" name="enter_email" required)
+                                    label.label(for="psw") Введите ваш пароль
+                                    span.form__error Необходимо заполнить поле
+                                    input.input(type="password" name="psw" required)
+                                    .flex-space.flex-wrap
+                                        button.button.button_view-action(type="submit") Войти
                     a.headertop__list(href="/bascet.html") Корзина
                     a.headertop__list.headertop__list-view_orange(href="#") 0
 

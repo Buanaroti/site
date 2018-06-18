@@ -213,20 +213,22 @@ html(lang="ru")
 					.form__footer
 						.flex-space
 							.flex-column.column-3
-								label.label(for="name") Ваше имя
-								input.input.feedback__width(type="text" id="name")
+								span.form__error Необходимо заполнить поле
+								label.label.form__required(for="feedback_name") Ваше имя
+								input.input.feedback__width(type="text" id="feedback_name")
 							.flex-column.column-3
-								label.label(for="email") Ваш email
-								input.input(type="text" id="email")
-						label.label(for="subject") Тема обращения
-						input.input(type="text" id="subject")
-						label.label(for="text") Текст
-						textarea.input(type="text" id="text")
-						button.button.button_view-action Отправить
+								span.form__error Необходимо заполнить поле
+								label.label.form__required(for="feedback_email") Ваш email
+								input.input(type="text" id="feedback_email")
+						label.label(for="feedback_subject") Тема обращения
+						input.input(type="text" id="feedback_subject")
+						label.label(for="text" name="feedback_text") Текст
+						textarea.input(type="text" id="feedback_text")
+						button.button.button_view-action.form__submit Отправить
 
 		// footer
 		.body__footer
 			include blocks/footer.pug
 
 		//scripts
-		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'calculator.js'])
+		+scripts(['jquery-3.2.1.min.js', 'main.js', 'slick.min.js', 'calculator.js', 'form.js'])
