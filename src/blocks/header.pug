@@ -32,7 +32,8 @@ header.header
                                         span.form__error Необходимо заполнить поле
                                         label.label(for="psw-repeat") Повторите пароль
                                         input.input.form__required(type="password" id="psw-repeat")
-                                    button.button.button_view-action.form__submit Зарегестрировать
+                                    .flex-center
+                                        button.button.button_view-action.form__submit Зарегестрировать
                     // modal enter
                     a.headertop__list.cursor(onclick="document.getElementById('id02').style.display='block'" style="width:auto;") Вход    
                     .modal#id02
@@ -49,7 +50,7 @@ header.header
                                         span.form__error Необходимо заполнить поле
                                         label.label(for="psw") Введите ваш пароль
                                         input.input.form__required(type="password" name="psw" required)
-                                    .flex-space.flex-wrap
+                                    .flex-center
                                         button.button.button_view-action.form__submit(type="submit") Войти
                     a.headertop__list(href="/bascet.html") Корзина
                     a.headertop__list.headertop__list-view_orange(href="#") 0

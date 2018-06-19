@@ -11,7 +11,7 @@ function calculator() {
     n1 = document.getElementById('n1').value; // получаю число из input по id (Тираж)
     n1 = parseInt(n1); // если есть возможность преобразовать строку в число - выполняем 
     format = document.getElementById('format').value;// получаю число из select по id (Формат)
-    papper = document.getElementById('ppper').value;// получаю число из select по id (Бумага)
+    papper = document.getElementById('papper').value;// получаю число из select по id (Бумага)
     color = document.getElementById('color').value;// получаю число из select по id (Цветность)
     laminazia = document.getElementById('laminazia').value;// получаю число из select по id (Ламинация)
     kruglenie = document.getElementById('Kruglenie').value * n1;// получаю число из select по id (Кругление углов)
@@ -27,3 +27,13 @@ function calculator() {
     document.getElementById('out').innerHTML = result; //получаю элемент span по id
     // использую свойство innerHTML что бы вставить переменную между тэгом 
 }
+
+// jquery
+
+// $(function() {
+//     $('.calculator__submit').click(function(event) {
+//         event.preventDefault();
+//         var form = $(this).parents('form')[0];
+//         console.log(form);
+//     })
+// })
