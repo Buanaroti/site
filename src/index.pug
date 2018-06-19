@@ -206,24 +206,25 @@ html(lang="ru")
 											.button.calculator__btn.button_view-white(onclick ='calculator()') Расчитать
 											button.button.button_view-action.calculator__btn Оформить
 			// feedback
-			.feedback.flex-space.wrap.gap-vertical.flex-center.fadeInLeft.animated.wow
-				form(action="").form.column-4
-					.form__header.feedback__header Связаться с нами
-					.form__footer
-						.flex-space
-							.flex-column.column-3
-								span.form__error Необходимо заполнить поле
-								label.label(for="feedback_name") Ваше имя
-								input.input.feedback__width.form__required(type="text" id="feedback_name")
-							.flex-column.column-3
-								span.form__error Необходимо заполнить поле
-								label.label(for="feedback_email") Ваш email
-								input.input.form__required(type="text" id="feedback_email")
-						label.label(for="feedback_subject") Тема обращения
-						input.input(type="text" id="feedback_subject")
-						label.label(for="text" name="feedback_text") Текст
-						textarea.input(type="text" id="feedback_text")
-						button.button.button_view-action.form__submit Отправить
+			.bgc-grey
+				.feedback.flex-space.wrap.gap-vertical.flex-center.fadeInLeft.animated.wow
+					form(action="").form.column-4
+						.form__header.feedback__header Связаться с нами
+						.form__footer
+							.flex-space
+								.flex-column.column-3
+									span.form__error Необходимо заполнить поле
+									label.label(for="feedback_name") Ваше имя
+									input.input.feedback__width.form__required(type="text" id="feedback_name")
+								.flex-column.column-3
+									span.form__error Необходимо заполнить поле
+									label.label(for="feedback_email") Ваш email
+									input.input.form__required(type="text" id="feedback_email")
+							label.label(for="feedback_subject") Тема обращения
+							input.input(type="text" id="feedback_subject")
+							label.label(for="text" name="feedback_text") Текст
+							textarea.input(type="text" id="feedback_text")
+							button.button.button_view-action.form__submit Отправить
 
 		// footer
 		.body__footer

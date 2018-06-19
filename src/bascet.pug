@@ -26,8 +26,71 @@ html(lang="ru")
 		include blocks/header.pug
 		//content
 		.content
-			.wrap
-				p Тирьям Тирим
+			// stepControl
+			.stepControl.wrap.flex-start.gap-vertical
+				.stepControl__step1
+					img.stepControl__img(src="images/stepControl/basket.png", alt="basket")
+					| Корзина
+				.stepControl__step2
+					img.stepControl__img(src="images/stepControl/listing.png", alt="basket")
+					| Вход/Регистрация
+				.stepControl__step3
+					img.stepControl__img(src="images/stepControl/shipped.png", alt="basket")
+					| Доставка
+				.stepControl__step4
+					img.stepControl__img(src="images/stepControl/piggybank.png", alt="basket")
+					| Оплата	
+			// formProduct
+			form.formProduct.wrap
+				.formProduct__header
+					table.formProduct__table-header
+						thead.formProduct__thead
+							tr
+								th.formProduct__thead-decribe 
+									| Описание
+								th.formProduct__thead-price 
+									| Цена
+								th.formProduct__thead-sum 
+									| Сумма
+								th.formProduct__thead-action
+									| Действие
+						tbody.formProduct__tbody
+							tr
+								th.formProduct__tbody-decribe
+									img(src="/images/plakat.png", alt="product")
+								th.formProduct__tbody-price
+									| 500
+								th.formProduct__tbody-sum
+									| 1500
+								th.formProduct__tbody-action
+									| x
+					table.formProduct__table-footer
+						tbody.formProduct__tbody
+							tr
+								th.formProduct__tbody-decribeTotal
+								th.formProduct__tbody-priceTotal
+									| 500
+								th.formProduct__tbody-sumTotal
+									| 1500
+								th.formProduct__tbody-actionTotal
+				.flex-end
+					.formProduct__footer
+						.flex-space.flex-row
+							span Всего
+							span 500 &#8381
+
+
+
+
+				.formProduct__footer
+
+
+
+
+
+
+
+
 
 		// footer
 		.body__footer
