@@ -20,3 +20,14 @@ $(document).ready(function() {
 		}, 700);
 	});
 });
+
+// URL - menu
+var str = window.location.toString();
+var pages = str.split('/');
+console.log(str);
+console.log(pages);
+if (pages[3] == '' || pages[3] == 'index.html' || pages[3] == 'main') {
+	document.getElementById('dropdown__active').style.display = "block";
+	document.getElementById('dropdown__active-button').style.backgroundColor = "#384248";
+	document.getElementById('dropdown__active-button').style.color = "#fff";
+}

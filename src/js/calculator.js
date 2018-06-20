@@ -28,6 +28,12 @@ function calculator() {
     // использую свойство innerHTML что бы вставить переменную между тэгом 
 }
 
+//calculator menu
+
+
+
+
+
 // jquery
 
 // $(function() {

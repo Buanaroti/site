@@ -57,7 +57,11 @@ html(lang="ru")
 						tbody.formProduct__tbody
 							tr
 								th.formProduct__tbody-decribe
-									img(src="/images/plakat.png", alt="product")
+									.flex-start
+										img.formProduct__img(src="/images/plakat.png", alt="product")
+										.flex-column
+											span.formProduct__name Плакат
+											span.formProduct__volum Количество 500 шт.
 								th.formProduct__tbody-price
 									| 500
 								th.formProduct__tbody-sum
@@ -75,9 +79,12 @@ html(lang="ru")
 								th.formProduct__tbody-actionTotal
 				.flex-end
 					.formProduct__footer
-						.flex-space.flex-row
-							span Всего
+						.formProduct__footer-span.flex-space
+							span Всего:
 							span 500 &#8381
+						.flex-end
+							.button.button_view-action.formProduct__footer-btn(onclick="document.getElementById('id01').style.display='block'" style="width:auto;") Зарегестрироваться и заказать
+							.button.button_view-info.formProduct__footer-btn(onclick="document.getElementById('id02').style.display='block'" style="width:auto;") Войти и заказать
 
 
 

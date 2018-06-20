@@ -51,9 +51,9 @@ header.header
                                         label.label(for="psw") Введите ваш пароль
                                         input.input.form__required(type="password" name="psw" required)
                                     .flex-center
-                                        button.button.button_view-action.form__submit(type="submit") Войти
+                                        button.button.button_view-action.form__submit.modal_btn(type="submit") Войти
                     a.headertop__list(href="/bascet.html") Корзина
-                    a.headertop__list.headertop__list-view_orange(href="#") 0
+                    a.headertop__list.headertop__list-view_orange(href="#") 1
 
     .headermiddle
         .wrap.flex-space
@@ -96,8 +96,8 @@ header.header
     .headerbottom
         .wrap.flex-space
             .dropdown.headerbottom__dropdown
-                .dropdown__button.cursor ПРОДУКЦИЯ И УСЛУГИ
-                .dropdown__content
+                .dropdown__button.cursor#dropdown__active-button ПРОДУКЦИЯ И УСЛУГИ
+                .dropdown__content#dropdown__active
                     span.dropdown__popular.flex-end Популярное
                     // Визитки
                     .dropdown__link.cursor Визитки
@@ -107,24 +107,24 @@ header.header
                                 .dropdown-subnav__col-left
                                     form(action="calc.php", method="post").dropdown-subnav__form.flex-column
                                         span.dropdown-subnav__span-size Размер
-                                        select.select(name="size") 
-                                            option(value="90x50") 90x50 мм
-                                            option(value="90x50") 85x55 мм
+                                        select.select(name="size")
+                                            option(value="0.80") 90x50 мм
+                                            option(value="0.70") 85x55 мм
                                         span.dropdown-subnav__span-cmyk Цветность
                                         label.dropdown-subnav__radio
-                                            input(type="radio", name="cmyk", checked)
+                                            input(type="radio" name="cmyk" checked value='1')
                                             span 
                                                 t Ч/б односторонняя
                                         label.dropdown-subnav__radio
-                                            input(type="radio", name="cmyk")
+                                            input(type="radio" name="cmyk" value='1.5')
                                             span 
                                                 t Ч/б двухсторонняя
                                         label.dropdown-subnav__radio
-                                            input(type="radio", name="cmyk")
+                                            input(type="radio" name="cmyk" value='2')
                                             span 
                                                 t Цветная односторонняя
                                         label.dropdown-subnav__radio
-                                            input(type="radio", name="cmyk")
+                                            input(type="radio" name="cmyk" value='3')
                                             span 
                                                 t Цветная двухсторонняя
                                     .dropdown-subnav__more
